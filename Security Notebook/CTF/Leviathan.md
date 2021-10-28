@@ -1,6 +1,6 @@
 # Leviathan
 
--   leviathan0: `grep leviathan ~/.backup/bookmarks.html`{.verbatim} (rioGegei8m)
+-   leviathan0: `grep leviathan ~/.backup/bookmarks.html` (rioGegei8m)
 
 ## leviathan1
 
@@ -40,11 +40,13 @@ test eax, eax
 jne 0x80485e5
 ```
 
-Ok, so there are multiple strings defined, \'sex\', \'secr\', \'et\', \'god\', \'love\'. The binary than prints the password prompt and saves the user\'s input into `[s1]`{.verbatim} as can be seen on the instruction `mov byte [s1] al`. It then pushes `s1`{.verbatim} and `s2`{.verbatim} on the stack and calls `strcmp` on those two strings. If they match (aka. `text eax, eax` sets the zero flag) than a shell is spawned. And between all the strings in the start, the one pushed to `[s2]` s2 is `sex`{.verbatim}, nice. (ougahZi8Ta)
+Ok, so there are multiple strings defined, \'sex\', \'secr\', \'et\', \'god\', \'love\'. The binary than prints the password prompt and saves the user\'s input into `[s1]` as can be seen on the instruction `mov byte [s1] al`. It then pushes `s1` and `s2` on the stack and calls `strcmp` on those two strings. If they match (aka. `text eax, eax` sets the zero flag) than a shell is spawned. And between all the strings in the start, the one pushed to `[s2]` s2 is `sex`, nice. (ougahZi8Ta)
 
 ## leviathan2
 
-``` {.asm6502 .numberLines startFrom=""}
+```assembly
+.text
+main:
 add esp, 0x10
 test eax, eax
 je 0x80485a8
@@ -67,6 +69,6 @@ lea esp, [ecx - 4]
 ret
 ```
 
-The program asks the user for the input of a filename and then runs `/bin/cat %s` using the `system`{.verbatim} function call. We can inject any command we want by separating the filename with *;* . We can simply create a file with the name \'; sh\' and run `printfile`{.verbatim}. Bada Bing Bada Boom, we have a shell.(Ahdiemoo1j)
+The program asks the user for the input of a filename and then runs `/bin/cat %s` using the `system` function call. We can inject any command we want by separating the filename with *;* . We can simply create a file with the name \'; sh\' and run `printfile`. Bada Bing Bada Boom, we have a shell.(Ahdiemoo1j)
 
 ## leviathan3
