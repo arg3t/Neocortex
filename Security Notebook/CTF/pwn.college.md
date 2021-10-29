@@ -116,3 +116,8 @@ _start:
 
 flag: .ascii "/flag"
 ```
+
+#### 5
+Shit, now we can't even use syscalls, we need to dynamically override the shellcode. What we need to do is, we first need to allocate space in our code for the syscalls using two `ret`instructions. (each `ret` is 1 byte while each `syscall` is 2). Than, we can just overwrite the addresses relative to `%rip`.
+
+```assembly
