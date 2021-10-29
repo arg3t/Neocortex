@@ -34,3 +34,9 @@ objcopy -O binary --only-section=.text 1 1.raw
 ```
 
 Now, all we need to do is provide this 1.raw as input to the binary and we get the flag!
+
+#### 3
+This challenge forbids us from using the H(0x48) byte in our shellcode. Unfortunately, this is the byte for the [REX](https://wiki.osdev.org/X86-64_Instruction_Encoding#REX_prefix) prefix, which is necessary when you use 64 bit operands with operations that don't support it.
+
+
+Thankfully, push and pop can do long-mode operations without using the REX prefix, so we can use them instead of mov. But this removes our ability to do rip relative addressing. Here is the code that should achieve that:
