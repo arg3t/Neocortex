@@ -1,7 +1,7 @@
 # pwn.college
 ## CSE466
 ### Shell
-#### 1
+#### 1 - 2
 
 We are asked to receive the flag in '/flag'. First, we write the assembly code corresponding to the shellcode that we want to generate:
 
@@ -34,6 +34,3 @@ objcopy -O binary --only-section=.text 1 1.raw
 ```
 
 Now, all we need to do is provide this 1.raw as input to the binary and we get the flag!
-
-#### 2
-Our solutio
