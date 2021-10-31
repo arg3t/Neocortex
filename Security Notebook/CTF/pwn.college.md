@@ -293,3 +293,8 @@ _start:
 .byte 0xFF, 0xFF, 0xFF
 flag: .ascii "/flag"
 ```
+
+#### 9
+Solution for 8 works here as well, maybe I tried too hard in the previous one?
+
+#### 10
