@@ -1,14 +1,3 @@
----
-author: Yigit Colakoglu
-date: 2021-06-19 Sat
-email: yigit\@yigitcolakoglu.com
-lang: en
-title: Krypton Solutions
----
-
-```{=org}
-#+roam_tags: security cryptology ctf wargame overthewire
-```
 # Krypton
 
 -   krypton0: `echo S1JZUFRPTklTR1JFQVQ= | base64 -d` (KRYPTONISGREAT)

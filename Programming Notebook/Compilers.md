@@ -17,10 +17,12 @@
 
 4.  **Intermediate Code Generation:** In this step we create the `intermediate representation`{.verbatim} of the source code. Intermediate representation should be easy to generate and translate to the target program. A very common form is the `three-address code(TAC)`{.verbatim} which is a sequence of simple instructions with at most three operands.
 
+```
       real code            TAC
       -------------------- ---------------
       a = ( c + b ) \* 2   ~t1~ = c + b
                            a = ~t1~ \* 2
+```
 
 ## Back-End analysis (Synthesis)
 
