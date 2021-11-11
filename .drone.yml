@@ -8,7 +8,7 @@ pipeline:
     hosts: [ "192.168.1.5" ]
     port: 3471
     target: /var/www/html/wiki.fr1nge.xyz
-    source: html/*
+    source: html
     key:
       from_secret: rsync_key
     user: root

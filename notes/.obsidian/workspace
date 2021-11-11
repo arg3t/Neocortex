@@ -1,10 +1,10 @@
 {
   "main": {
-    "id": "2875a38913782913",
+    "id": "9fb2658b9db72c73",
     "type": "split",
     "children": [
       {
-        "id": "10ac6c1629d4fbd0",
+        "id": "604cf88da3dc1160",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -90,7 +90,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "10ac6c1629d4fbd0",
+  "active": "604cf88da3dc1160",
   "lastOpenFiles": [
     "Untitled.md"
   ]
