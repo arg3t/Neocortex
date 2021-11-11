@@ -7,9 +7,10 @@ pipeline:
     image: drillster/drone-rsync
     hosts: [ "192.168.1.5" ]
     port: 3471
-    target: /var/www/html/wiki.fr1nge.xyz
-    source: html/*
     delete: true
+    recursive: true
+    target: /var/www/html/wiki.fr1nge.xyz
+    source: html/
     key:
       from_secret: rsync_key
     user: root
