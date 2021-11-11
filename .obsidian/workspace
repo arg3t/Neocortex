@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "f204a166408b36dd",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c160363b5a6c1b9",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5295095e4153641b",
+    "type": "split",
+    "children": [
+      {
+        "id": "516b630106e08b30",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "75b860c0f7ea0e2f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b694903a7dd9f484",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a1a6bdc1332998b1",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1f82e7ab333dc5a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e92c0c19b3bda53c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "5c160363b5a6c1b9",
+  "lastOpenFiles": [
+    "Security Notebook/CTF/pwn.college.md",
+    "Security Notebook/CTF/Leviathan.md",
+    "Security Notebook/CTF/natas.md",
+    "Programming Notebook/Compilers.md",
+    "Sprint Automatic Object Creation.md",
+    "Security Notebook/Vulnerabilities/Path Traversal.md",
+    "Security Notebook/Crypto.md",
+    "Security Notebook/Vulnerabilities/Authentication.md",
+    "Security Notebook/Tools/Burpsuite.md",
+    "Security Notebook/Tools/amass.md"
+  ]
+}
