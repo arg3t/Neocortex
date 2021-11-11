@@ -44,7 +44,7 @@ There are two ways that brute force protection can be implemented. THe system ca
 
 ## Password Change
 
-Password change functionalities can be vulnerable to Host Header injections. By changing the `Host`{.verbatim} header in forgot password requests, you can alter the url that the web applications refers to in its e-mail that it sends. This opens up the possibility for phishing attacks.
+Password change functionalities can be vulnerable to Host Header injections. By changing the `Host` header in forgot password requests, you can alter the url that the web applications refers to in its e-mail that it sends. This opens up the possibility for phishing attacks.
 
--   When changing the Host header breaks the application, if a middleware is being used you can instead send a `X-Forwarded-Host`{.verbatim} header in your request which could have the same effect of changing the Host header without breaking the application.
--   Also, editing the port number in a Host header is sometimes useful as well. The ability to inject non-numeric parameters to the port number could potentially allow an attacker to execute Dangling HTML attacks or simply alter the url being visited by changing the URL to the form of `username:password@domain`{.verbatim}
+-   When changing the Host header breaks the application, if a middleware is being used you can instead send a `X-Forwarded-Host` header in your request which could have the same effect of changing the Host header without breaking the application.
+-   Also, editing the port number in a Host header is sometimes useful as well. The ability to inject non-numeric parameters to the port number could potentially allow an attacker to execute Dangling HTML attacks or simply alter the url being visited by changing the URL to the form of `username:password@domain`

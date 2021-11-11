@@ -4,7 +4,7 @@ File path traversal vulnerabilities allow an attacker to read/write arbitrary fi
 
 ## Basic Path Traversal
 
-When the web application does not properly sanitise the parameters where a filename is expected, it could be possible to inject `../`{.verbatim} s on the path which could allow an attacker to access files higher in the directory hierarchy.
+When the web application does not properly sanitise the parameters where a filename is expected, it could be possible to inject `../` s on the path which could allow an attacker to access files higher in the directory hierarchy.
 
 ## Bypassing Protections
 
@@ -14,7 +14,7 @@ Even when a web app does not respond to request like `?file=../../../../.././../
 
 ### Sanitisation of Path Traversal Payloads
 
-When a web applications sanitises payloads like `../`{.verbatim}, if it doesn\'t remove them recursively it could be possible to still access files in the higher directories using payloads like `....//`{.verbatim} since when sanitised it would still be valid(`....//`{.verbatim} -\> `.[../]`{.verbatim} -\> `../`{.verbatim})
+When a web applications sanitises payloads like `../`, if it doesn\'t remove them recursively it could be possible to still access files in the higher directories using payloads like `....//` since when sanitised it would still be valid(`....//` -\> `.[../]` -\> `../`)
 
 ### URL Encoding
 
@@ -22,8 +22,8 @@ In the cases where we try to bypass a middleware that blocks/sanitises our input
 
 ### Start of Path Checks
 
-Some web applications that allow users to access the files using an absolute path, check whether the path provided by the user starts with a certain path. This can easily be bypasses using the `../`{.verbatim} method by sending a request like `?path=/tmp/access/../../../../etc/passwd`. This can be combined with previous techniques to bypass any other protections of they exist.
+Some web applications that allow users to access the files using an absolute path, check whether the path provided by the user starts with a certain path. This can easily be bypasses using the `../` method by sending a request like `?path=/tmp/access/../../../../etc/passwd`. This can be combined with previous techniques to bypass any other protections of they exist.
 
 ### Validation of File Extension
 
-This is a tough one, however sometimes, when an application checks the end of string, without controlling for null bytes, we can add a `%00`{.verbatim} right before the file extension in order to trick the web application into thinking we are sending a valid request while the operating systems accesses the file without the extension since a null byte is used as a string t
+This is a tough one, however sometimes, when an application checks the end of string, without controlling for null bytes, we can add a `%00` right before the file extension in order to trick the web application into thinking we are sending a valid request while the operating systems accesses the file without the extension since a null byte is used as a string t

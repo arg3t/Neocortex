@@ -4,9 +4,9 @@
 
 ## Front-End analysis
 
-1.  **Lexical analysis:** Lexical analysis is the process of taking the source code as a stream of characters and splitting it into `tokens`{.verbatim} (Tokens are sequences of characters that have a collective meaning.).
+1.  **Lexical analysis:** Lexical analysis is the process of taking the source code as a stream of characters and splitting it into `tokens` (Tokens are sequences of characters that have a collective meaning.).
 
-2.  **Syntax analysis & Parsing:** Syntax analysis is the process of parsing a sequence of tokens generated in lexical analysis and outputting a `parse-tree`{.verbatim} or a `derivation`{.verbatim}.
+2.  **Syntax analysis & Parsing:** Syntax analysis is the process of parsing a sequence of tokens generated in lexical analysis and outputting a `parse-tree` or a `derivation`.
 
 3.  **Semantic Analysis:** In semantic analysis we check the code for non-syntactic but semantic errors. These errors include improper arguments, access violations and undeclared variables. An example of a semantic error is:
 
@@ -15,7 +15,7 @@
     foo + 2 # You can't add an int to a list
     ```
 
-4.  **Intermediate Code Generation:** In this step we create the `intermediate representation`{.verbatim} of the source code. Intermediate representation should be easy to generate and translate to the target program. A very common form is the `three-address code(TAC)`{.verbatim} which is a sequence of simple instructions with at most three operands.
+4.  **Intermediate Code Generation:** In this step we create the `intermediate representation` of the source code. Intermediate representation should be easy to generate and translate to the target program. A very common form is the `three-address code(TAC)` which is a sequence of simple instructions with at most three operands.
 
 ```
       real code            TAC
@@ -26,7 +26,7 @@
 
 ## Back-End analysis (Synthesis)
 
-1.  **Intermediate Code Optimisation:** This stage accepts the `intermediate representation`{.verbatim} generated in **Intermediate Code Generation** and applies several optimisation techniques to it including but not limited to:
+1.  **Intermediate Code Optimisation:** This stage accepts the `intermediate representation` generated in **Intermediate Code Generation** and applies several optimisation techniques to it including but not limited to:
     -   suppressing code generation of unreachable code segments,
     -   ridding of unused variables,
     -   eliminating multiplication by 1 and addition by 0,
@@ -39,7 +39,7 @@
 
 [Lexical Analysis Diagram](./static/Lexical_Analysis/2021-06-06T13:38:04.png)
 
-A lexical analyser takes a stream of characters and generates tokens as its output. It can recognise particular instances of tokens which are called `lexemes`{.verbatim}. A lexeme is the actual sequence forming a token. The scanner\'s task is to determine the tokens from an input stream but it has no idea where the tokens belong to. Therefore it can only detect errors caused by invalid tokens, it can\'t detect out of place tokens, mismatched parentheses etc. The lexical analyser is a convenient tool to strip out comments and unnecessary white spaces
+A lexical analyser takes a stream of characters and generates tokens as its output. It can recognise particular instances of tokens which are called `lexemes`. A lexeme is the actual sequence forming a token. The scanner's task is to determine the tokens from an input stream but it has no idea where the tokens belong to. Therefore it can only detect errors caused by invalid tokens, it can't detect out of place tokens, mismatched parentheses etc. The lexical analyser is a convenient tool to strip out comments and unnecessary white spaces
 
 ## How rules are implemented
 
@@ -52,9 +52,9 @@ When scanning a stream of characters, an analyser might encounter situations whe
 
 ### Important terminology
 
--   `symbol`{.verbatim} an abstract entity that we shall not define formally (such as \"point\" in geometry). Letters, digits and punctuation are examples of symbols.
--   `alphabet`{.verbatim} a finite set of symbols out of which we build larger structures, typically denoted by Σ.
--   `formal language Σ*`{.verbatim} the set of all possible strings that can be generated from a given alphabet
+-   `symbol` an abstract entity that we shall not define formally (such as \"point\" in geometry). Letters, digits and punctuation are examples of symbols.
+-   `alphabet` a finite set of symbols out of which we build larger structures, typically denoted by Σ.
+-   `formal language Σ*` the set of all possible strings that can be generated from a given alphabet
 
 ### From RegEx to Automata
 
@@ -69,37 +69,37 @@ A finite automata can be used to implement scanners in the following manner:
 
     What sets an NFA different from a Deterministic Finite Automata(DFA) is that a state can have ε moves(moves that don\'t shift the input stream) and multiple moves from the same state that are associated with the same character. These features allow us to more easily generate NFAs from regular expressions.
 
-    An NFA that accepts the RegEx `(0|1)*(000|111)(0|1)*`{.verbatim} [RegToNFA](./static/Lexical_Analysis/2021-06-06T19:46:57_RegToNFA.png)
+    An NFA that accepts the RegEx `(0|1)*(000|111)(0|1)*` [RegToNFA](./static/Lexical_Analysis/2021-06-06T19:46:57_RegToNFA.png)
 
     When generating an NFA from a regular expression, one can follow the following rules:
 
-    -   `Rule 1`{.verbatim} An NFA that accepts any symbol from the alphabet
+    -   `Rule 1` An NFA that accepts any symbol from the alphabet
 
         [NFAR1](./static/Lexical_Analysis/2021-06-06T19:47:14_NFAR1.png)
 
-    -   `Rule 2`{.verbatim} An NFA that accepts only ϵ
+    -   `Rule 2` An NFA that accepts only ϵ
 
         [NFAR2](./static/Lexical_Analysis/2021-06-06T19:49:15_NFAR2.png)
 
-    -   `Rule 3`{.verbatim} An ϵ NFA that accepts `r1|r2`{.verbatim}
+    -   `Rule 3` An ϵ NFA that accepts `r1|r2`
 
         [NFAR3](./static/Lexical_Analysis/2021-06-06T19:51:28_NFAR3.png)
 
-    -   `Rule 4`{.verbatim} An ϵ NFA that accepts `r1r2`{.verbatim}
+    -   `Rule 4` An ϵ NFA that accepts `r1r2`
 
         [NFAR4](./static/Lexical_Analysis/2021-06-06T19:53:04_NFAR4.png)
 
-    -   `Rule 5`{.verbatim} An ϵ NFA that accepts `r1*`{.verbatim}
+    -   `Rule 5` An ϵ NFA that accepts `r1*`
 
         [NFAR5](./static/Lexical_Analysis/2021-06-06T19:53:50_NFAR5.png)
 
 2.  Converting from NFA to Deterministic Finite Automata
 
-    In the process of conversion from NFA to DFA we use a technique called `subset construction`{.verbatim}. Each state in the resulting DFA is made up of a set of states from the original NFA and it has the same start state and the same alphabets. This means that given a state from the original NFA, an input symbol `x`{.verbatim} takes us from our current state to all the possible states we can reach using the x move and ϵ moves. The combined set of all those states form a new state in our DFA. Therefore, each state in our DFA is a subset of S(the set of states in our NFA) so it can have at most $2^n$ states, n being the size of the set S.
+    In the process of conversion from NFA to DFA we use a technique called `subset construction`. Each state in the resulting DFA is made up of a set of states from the original NFA and it has the same start state and the same alphabets. This means that given a state from the original NFA, an input symbol `x` takes us from our current state to all the possible states we can reach using the x move and ϵ moves. The combined set of all those states form a new state in our DFA. Therefore, each state in our DFA is a subset of S(the set of states in our NFA) so it can have at most $2^n$ states, n being the size of the set S.
 
 # flex Overview
 
-**flex** allows you to specify the scanner you want using patterns to match and actions to apply. It then uses the language you specified to generate and NFA, then converts it into an equivalent DFA and generates C code that implements that automaton. You can learn more about flex [here](http://flex.sourceforge.net/manual/) or by running `info flex`{.verbatim}.
+**flex** allows you to specify the scanner you want using patterns to match and actions to apply. It then uses the language you specified to generate and NFA, then converts it into an equivalent DFA and generates C code that implements that automaton. You can learn more about flex [here](http://flex.sourceforge.net/manual/) or by running `info flex`.
 
 ## A flex Input File
 
@@ -120,7 +120,7 @@ The optional fields **Declarations** and **User subroutines** sections are copie
 
 The **yylex** function is a function that takes no argument and returns an integer, it is the token-grabbing function. Since it returns nothing, it sets global variables that be read by the caller. Here are the global variables it uses:
 
--   `yytext`{.verbatim} is a null-terminated string containing the text of the lexeme just recognised.
--   `yyleng`{.verbatim} is an integer holding the length of the lexeme stored in `yytext`{.verbatim}
--   `yylval`{.verbatim} is the global variable used to store attributes about the token, it is of type YYSTYPE.
--   `yylloc`{.verbatim} is the global variable used to store the location of the lexeme
+-   `yytext` is a null-terminated string containing the text of the lexeme just recognised.
+-   `yyleng` is an integer holding the length of the lexeme stored in `yytext`
+-   `yylval` is the global variable used to store attributes about the token, it is of type YYSTYPE.
+-   `yylloc` is the global variable used to store the location of the lexeme
