@@ -1,10 +1,10 @@
 {
   "main": {
-    "id": "4decf045a6166591",
+    "id": "2875a38913782913",
     "type": "split",
     "children": [
       {
-        "id": "e1b5e7bc38a09c43",
+        "id": "10ac6c1629d4fbd0",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -74,6 +74,14 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "6cea7b35ddb9ea8c",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
           }
         ]
       }
@@ -82,6 +90,8 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e1b5e7bc38a09c43",
-  "lastOpenFiles": []
+  "active": "10ac6c1629d4fbd0",
+  "lastOpenFiles": [
+    "Untitled.md"
+  ]
 }

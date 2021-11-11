@@ -1,6 +1,6 @@
 [mdzk]
 authors = ["Yigit Colakoglu"]
-ignore = ["Excalidraw", "Images", "index"]
+ignore = ["Excalidraw", "Images", "index.md"]
 language = "en"
 multilingual = false
 src = "notes"
