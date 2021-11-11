@@ -5,4 +5,3 @@ on my ipad and laptop and use DroneCI's continous integration through gitea to
 keep this website up-to-date, here is an index of everything that is currently
 on this site:
 
-{{#include .mdzk_summary.md}}
