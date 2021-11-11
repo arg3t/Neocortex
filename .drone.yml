@@ -1,8 +1,7 @@
 pipeline:
   build:
-      image: rust:1.30
+      image: rust:latest
       commands:
-        - cargo clean
         - cargo install mdzk
         - mdzk build
   deploy:
