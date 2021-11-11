@@ -1,6 +1,6 @@
 pipeline:
   build:
-      image: rust:latest
+      image: fr1nge/mdzk:latest
       commands:
         - cargo install mdzk
         - mdzk build
