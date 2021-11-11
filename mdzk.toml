@@ -1,0 +1,8 @@
+[mdzk]
+authors = ["Yigit Colakoglu"]
+ignore = []
+language = "en"
+multilingual = false
+src = "notes"
+title = "Obsidian Wiki"
+description = "An online version of my Zettelkasten"
