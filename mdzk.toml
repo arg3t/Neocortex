@@ -6,3 +6,7 @@ multilingual = false
 src = "notes"
 title = "Obsidian Wiki"
 description = "An online version of my Zettelkasten"
+
+[output.html.fold]
+enable = true
+level = 1
