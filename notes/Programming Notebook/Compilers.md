@@ -31,7 +31,7 @@
     -   ridding of unused variables,
     -   eliminating multiplication by 1 and addition by 0,
     -   loop optimisation (e.g., remove statements that are not modified in the loop),
-    -   common sub­expression elimination,
+    -   common sub-expression elimination,
 2.  **Object Code Generation:** In this step, the target program gets generated. This step usually outputs either machine code or assembly.
 3.  **Object Code Optimisation:** This is a non-mandatory step that processes the machine code generated and applies hardware-specific optimisations such as special instructions, pipelining and branch prediction).
 
