@@ -1,4 +1,7 @@
 ## 7 Important Functions
+
+![7 Functions' Graphs](/Images/2809E595-B410-465A-B5E4-65486A4A3C40.jpeg)
+
 ### Constant function
 A very simple function in the form $f(n) = c$ where c is a constant. 
 
@@ -19,5 +22,3 @@ Polynomials are basically functions that don’t have any terms with a factor le
 
 ### The exponential function
 These little fuckers are the worst of all, they are very slow, can be represented using formulas in the form $f(n) = a^n$ where $a \in \mathbb{Q}$.  They have the highest order between all the functions, and the order increases as a increases.
-
-![7 Functions' Graphs](/Images/2809E595-B410-465A-B5E4-65486A4A3C40.jpeg)
