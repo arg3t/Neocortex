@@ -1,7 +1,5 @@
 
----
-aliases: [Big O]
----
+## Big-Oh Notation
 
 Big-Oh notation is a way of calculating the maximum time an algorithm can take relative to its input size. The two ways to calculate big-oh notation is:
 
