@@ -15,7 +15,7 @@ def findandreplace(directory, query, result, extension, spacereplace=" "):
     for n in os.listdir(directory):
         d = os.path.join(directory, n)
         if os.path.isdir(d):
-            findandreplace(d, query, result, extension)
+            findandreplace(d, query, result, extension, spacereplace=spacereplace)
             continue
 
         if not n.endswith("."+extension):
