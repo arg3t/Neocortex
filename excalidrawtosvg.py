@@ -51,7 +51,7 @@ def main():
         with open(os.path.join(excalidir, svgname), "w") as f:
             f.write(svg)
 
-    findandreplace("notes", r"!\[\[Excalidraw\/Drawing (.*) (.*).md\]\]", r"![Excalidraw Drawing](/Excalidraw/Drawing-\1-\2.svg)", "md")
+    findandreplace("notes", r"!\[\[Excalidraw/Drawing (.*) (.*).md\]\]", r"![Excalidraw Drawing](/Excalidraw/Drawing-\1-\2.svg)", "md")
 
 
 if __name__ == "__main__":
