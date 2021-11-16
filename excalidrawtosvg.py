@@ -23,9 +23,9 @@ def findandreplace(directory, query, result, extension, spacereplace=" "):
 
         print(d)
         with open(d,"r") as f:
-            data = f.read()
+            data = f.read().replace(" ", spacereplace)
 
-        data = reg.sub(result, data).replace(" ", spacereplace)
+        data = reg.sub(result, data)
 
         with open(d,"w") as f:
             f.write(data)
