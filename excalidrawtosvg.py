@@ -10,12 +10,12 @@
 import os
 import re
 
-def findandreplace(directory, query, result, extension, spacereplace=" "):
+def findandreplace(directory, query, result, extension):
     reg = re.compile(query)
     for n in os.listdir(directory):
         d = os.path.join(directory, n)
         if os.path.isdir(d):
-            findandreplace(d, query, result, extension, spacereplace=spacereplace)
+            findandreplace(d, query, result, extension)
             continue
 
         if not n.endswith("."+extension):
@@ -23,7 +23,7 @@ def findandreplace(directory, query, result, extension, spacereplace=" "):
 
         print(d)
         with open(d,"r") as f:
-            data = f.read().replace(" ", spacereplace)
+            data = f.read()
 
         data = reg.sub(result, data)
 
@@ -51,7 +51,7 @@ def main():
         with open(os.path.join(excalidir, svgname), "w") as f:
             f.write(svg)
 
-    findandreplace("notes", r"!\[\[(Excalidraw\/Drawing.*).md\]\]", r"![Excalidraw Drawing](/\1.svg)", "md", spacereplace="-")
+    findandreplace("notes", r"!\[\[Excalidraw\/Drawing (.*) (.*).md\]\]", r"![Excalidraw Drawing](/Excalidraw/Drawing-\1-\2.svg)", "md")
 
 
 if __name__ == "__main__":
