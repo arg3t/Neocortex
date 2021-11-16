@@ -21,7 +21,6 @@ def findandreplace(directory, query, result, extension):
         if not n.endswith("."+extension):
             continue
 
-        print(d)
         with open(d,"r") as f:
             data = f.read()
 
