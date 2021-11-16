@@ -46,12 +46,12 @@ def main():
             elif i == '```\n':
                 insvg = False
 
-        svgname = ".".join(n.split(".")[0:-1]) + ".svg"
+        svgname = ".".join(n.split(".")[0:-1]).replace(" ", "-") + ".svg"
 
         with open(os.path.join(excalidir, svgname), "w") as f:
             f.write(svg)
 
-    findandreplace("notes", r"!\[\[(Excalidraw\/Drawing.*).md\]\]", r"![Excalidraw Drawing](/\1.svg)", "md")
+    findandreplace("notes", r"!\[\[Excalidraw\/Drawing (.*).md\]\]", r"![Excalidraw Drawing](/Excalidraw/Drawing-\1.svg)", "md")
 
 
 if __name__ == "__main__":
