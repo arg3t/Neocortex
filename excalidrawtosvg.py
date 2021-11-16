@@ -10,7 +10,7 @@
 import os
 import re
 
-def findandreplace(directory, query, result, extension):
+def findandreplace(directory, query, result, extension, spacereplace=" "):
     reg = re.compile(query)
     for n in os.listdir(directory):
         d = os.path.join(directory, n)
@@ -25,7 +25,7 @@ def findandreplace(directory, query, result, extension):
         with open(d,"r") as f:
             data = f.read()
 
-        data = reg.sub(result, data)
+        data = reg.sub(result, data).replace(" ", spacereplace)
 
         with open(d,"w") as f:
             f.write(data)
@@ -39,19 +39,19 @@ def main():
         insvg = False
         svg = ""
         for i in lines:
+            if i == '```\n':
+                insvg = False
             if insvg:
                 svg += i.strip()
             if i == '```html\n':
                 insvg = True
-            elif i == '```\n':
-                insvg = False
 
-        svgname = ".".join(n.split(".")[0:-1]).replace(" ", "-") + ".svg"
+        svgname = ".".join(n.split(".")[0:-1]).replace(" ","-") + ".svg"
 
         with open(os.path.join(excalidir, svgname), "w") as f:
             f.write(svg)
 
-    findandreplace("notes", r"!\[\[Excalidraw\/Drawing (.*).md\]\]", r"![Excalidraw Drawing](/Excalidraw/Drawing-\1.svg)", "md")
+    findandreplace("notes", r"!\[\[(Excalidraw\/Drawing.*).md\]\]", r"![Excalidraw Drawing](/\1.svg)", "md", spacereplace="-")
 
 
 if __name__ == "__main__":
