@@ -1,4 +1,8 @@
 pipeline:
+  excalidraw:
+    image: python
+    commands:
+      - python excalidrawtosvg.py
   build:
       image: fr1nge/mdzk:latest
       commands:
