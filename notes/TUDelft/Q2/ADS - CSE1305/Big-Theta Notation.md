@@ -9,6 +9,4 @@ Big theta notation is a little more complicated, the Big-Theta notation covers b
 
 A function $f(n)$ is said to be $\Theta(g(n))$ if there exists constants $c' > 0$, $c'' > 0$  and $n_0 > 1$ such that:
 
-$$
-\forall n (n > n_0 \implies c'g(n) \leq f(n) \leq c''g(n))
-$$
+$$\forall n (n > n_0 \implies c'g(n) \leq f(n) \leq c''g(n))$$
