@@ -51,6 +51,7 @@ def main():
             f.write(svg)
 
     findandreplace("notes", r"!\[\[Excalidraw/Drawing (.*) (.*).md\]\]", r"![Excalidraw Drawing](/Excalidraw/Drawing-\1-\2.svg)", "md")
+    findandreplace("notes", r"!\[\[(.*)\]\]", r"![\1](/Images/\1)", "md")
 
 
 if __name__ == "__main__":
