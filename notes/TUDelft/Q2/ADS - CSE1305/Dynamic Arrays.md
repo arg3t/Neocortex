@@ -9,6 +9,4 @@ The time complexities of element additions for size of dynamic array:
 
 In total, summing up the lower row of the table gives us $2n$ operations for an array of size $n+1$. In order to calculate the amortized time complexity of this data structure we just take the average:
 
-$$
-\frac{2n}{n+1} \cong 1
-$$
+$$\frac{2n}{n+1} \cong 1$$
