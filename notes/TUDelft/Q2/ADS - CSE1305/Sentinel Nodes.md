@@ -1,4 +1,4 @@
 ## Sentinel Nodes
-Sometimes, when implementing [[Linked Lists]], especially [[Doubly Linked List]], it makes our job much easier to implement sentinel nodes. Sentinel nodes are basicaly *dummy* nodes that are defined with the list, called **header** and **tailer**. By using these dummy nodes, our job is greatly simplified due to several reasons:
+Sometimes, when implementing [[Linked List]], especially [[Doubly Linked List]], it makes our job much easier to implement sentinel nodes. Sentinel nodes are basicaly *dummy* nodes that are defined with the list, called **header** and **tailer**. By using these dummy nodes, our job is greatly simplified due to several reasons:
 * We don't have to implement seperately the `addFirst()` and `addLast()` method since every add operation is made between two nodes,(even in an empty list, nodes are added between **header** and **tailer**).
 * The header and tailer nodes remain constant in the list.

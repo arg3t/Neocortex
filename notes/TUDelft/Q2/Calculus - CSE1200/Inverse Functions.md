@@ -6,12 +6,12 @@ $$y = x^2 - 4x + 7$$
 $$x = y^2 - 4y + 7$$
 $$0 = y^2 - 4y + 7 - x$$ 
 $$a=1, b=-4, c=7-x$$
-$$\frac{4 \pm \sqrt{16 - 4(7-x)}}{2}$$
-$$\frac{4 \pm 2\sqrt{4 - 7+x}}{2}$$
-$$2 \pm \sqrt{x-3}$$
+$$y = \frac{4 \pm \sqrt{16 - 4(7-x)}}{2}$$
+$$y = \frac{4 \pm 2\sqrt{4 - 7+x}}{2}$$
+$$y = 2 \pm \sqrt{x-3}$$
 Two possible options:
 $$y = 2 + \sqrt{x-3}$$
 $$y = 2 - \sqrt{x-3}$$
-Since when we take the inverse functions, we switch the domain and the range, we pick the function with the range $y /ge 2$, so the first one. Therefore:
+Since when we take the inverse functions, we switch the domain and the range, we pick the function with the range $y \ge 2$, so the first one. Therefore:
 
 $$f^{-1}(x) = 2 + \sqrt{x-3}$$
