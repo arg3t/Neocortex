@@ -45,13 +45,13 @@ def main():
             if i == '```html\n':
                 insvg = True
 
-        svgname = ".".join(n.split(".")[0:-1]).replace(" ","-") + ".svg"
+        svgname = ".".join(n.split(".")[0:-1]) + ".svg"
 
         with open(os.path.join(excalidir, svgname), "w") as f:
             f.write(svg)
 
-    findandreplace("notes", r"!\[\[Excalidraw/Drawing (.*) (.*).md\]\]", r"![Excalidraw Drawing](/Excalidraw/Drawing-\1-\2.svg)", "md")
-    findandreplace("notes", r"!\[\[(.*)\]\]", r"![\1](/Images/\1)", "md")
+    findandreplace("notes", r"!\[\[Excalidraw/(.*).md\]\]", r"![Excalidraw Drawing](</Excalidraw/\1.svg>)", "md")
+    findandreplace("notes", r"!\[\[(.*)\]\]", r"![\1](</Images/\1>)", "md")
 
 
 if __name__ == "__main__":

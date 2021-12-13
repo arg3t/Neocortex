@@ -1,0 +1,2 @@
+## Heap
+A heap is basically a [[Binary Tree]] which is complete([[Full & Complete Trees]]) and every child of a parent node ([[Tree Terminology]]) has a value vale greater that or equal to the parent's value.
