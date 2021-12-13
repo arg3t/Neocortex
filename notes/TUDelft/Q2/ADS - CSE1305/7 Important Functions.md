@@ -2,6 +2,8 @@
 
 ![7 Functions' Graphs](/Images/2809E595-B410-465A-B5E4-65486A4A3C40.jpeg)
 
+When calculating the [[Big-Oh Notation]] of a function it is important to know the order of these functions.
+
 ### Constant function
 A very simple function in the form $f(n) = c$ where c is a constant. 
 
