@@ -1,5 +1,5 @@
 ## Dynamic Arrays
-Normally, adding an element to an already full array would take $O(n)$ time, if you resize it by 1 cell everytime an element is added, that is. However, when you extend the array by the number of elements there are in the array everytime it is full, the time complerxity drops to $O(1)$.
+Normally, adding an element to an already full [[Array]] would take $O(n)$ time, if you resize it by 1 cell everytime an element is added, that is. However, when you extend the array by the number of elements there are in the array everytime it is full, the time complerxity drops to $O(1)$.
 
 The time complexities of element additions for size of dynamic array:
 
