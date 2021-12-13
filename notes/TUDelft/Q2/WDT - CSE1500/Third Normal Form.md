@@ -1,3 +1,7 @@
+---
+title: 3rd Normal Form (3NF)
+date: 2021-12-13
+---
 ## 3rd Normal Form (3NF)
 Any 3NF schema must also be in [[Second Normal Form]]. The only extra requirement is that there is no [[Transitive Dependency]] between the [[Primary Key]] of the relation and another attribute.
 

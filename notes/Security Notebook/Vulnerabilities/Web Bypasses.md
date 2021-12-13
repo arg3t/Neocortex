@@ -1,3 +1,7 @@
+---
+title: # Bypasses
+date: 2021-11-16
+---
 # Bypasses
 
 ## X-Forwarded-For header

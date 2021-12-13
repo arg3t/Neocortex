@@ -1,3 +1,7 @@
+---
+title: # Natas
+date: 2021-11-16
+---
 # Natas
 
 -   **natas0**: in comments (gtVrDuiDfck831PqWsLEZy5gyDz1clto)

@@ -1,3 +1,7 @@
+---
+title: 2nd Normal Form (2NF)
+date: 2021-12-13
+---
 ## 2nd Normal Form (2NF)
 Any 2NF schema must also be 1NF, however, there are some extra requirements for a [[Relational Model]] to be 2NF. It must not contain any [[Partial Dependency]]s.
 

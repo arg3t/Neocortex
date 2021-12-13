@@ -1,3 +1,7 @@
+---
+title: Transitive Dependency
+date: 2021-12-13
+---
 ## Transitive Dependency
 Let's say in your [[Relational Model]], you have two [[Functional Dependency]]s as such:
 

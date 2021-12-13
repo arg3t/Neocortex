@@ -1,3 +1,7 @@
+---
+title: # XSS Vectors
+date: 2021-11-16
+---
 # XSS Vectors
 ## XSS Vector Without Spaces, Using Throw
 

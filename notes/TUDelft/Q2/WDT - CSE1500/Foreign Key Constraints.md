@@ -1,3 +1,7 @@
+---
+title: Foreign Key Constraints
+date: 2021-12-01
+---
 ## Foreign Key Constraints
 Sometimes, a relation might need to me make a reference to another relation. In those cases, we use the following notation:
 Hero(<ins>id</ins>, first_name, last_name)

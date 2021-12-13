@@ -1,3 +1,7 @@
+---
+title: Converting to a [[Relational Model]]
+date: 2021-12-13
+---
 ## Converting to a [[Relational Model]]
 Even though [[ER Diagrams]] contain more semantic information, they are harder to turn into actual databases because some of the constraints are impossible to represent.
 
@@ -29,4 +33,3 @@ Treat the attribute as a relation and create a new relation with a cardinality o
 
 ### Inherited Attributes and Relations
 Create a single entity that contains all the attributes and relations from all types and add an extra attribute type.
-

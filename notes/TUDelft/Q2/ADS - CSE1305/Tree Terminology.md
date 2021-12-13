@@ -1,3 +1,7 @@
+---
+title: Important Tree Terminology
+date: 2021-12-13
+---
 ## Important Tree Terminology
 [[Tree]]s have some important terminology.
 

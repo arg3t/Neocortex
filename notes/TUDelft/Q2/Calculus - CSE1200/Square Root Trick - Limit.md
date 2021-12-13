@@ -1,3 +1,7 @@
+---
+title: The Square Root Trick
+date: 2021-11-24
+---
 ## The Square Root Trick
 When you run into the indeterminate form([[Indeterminate Forms in Limits]])  $\frac{0}{0}$ while taking the limit of a function $f$ and either the numerator or denominator of the function is in the form $a + b\sqrt{c}$, you can just multiply both sides of the fraction with $a-b\sqrt{c}$ and then calculate the limit from there.
 

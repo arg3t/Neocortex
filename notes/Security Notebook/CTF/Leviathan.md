@@ -1,3 +1,7 @@
+---
+title: # Leviathan
+date: 2021-11-16
+---
 # Leviathan
 
 -   leviathan0: `grep leviathan ~/.backup/bookmarks.html` (rioGegei8m)

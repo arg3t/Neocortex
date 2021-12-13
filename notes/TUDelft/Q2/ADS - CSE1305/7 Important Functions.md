@@ -1,3 +1,7 @@
+---
+title: 7 Important Functions
+date: 2021-11-16
+---
 ## 7 Important Functions
 
 ![7 Functions' Graphs](/Images/2809E595-B410-465A-B5E4-65486A4A3C40.jpeg)

@@ -1,3 +1,7 @@
+---
+title: # pwn.college
+date: 2021-11-16
+---
 # pwn.college
 ## CSE466
 ### Shell
@@ -321,4 +325,3 @@ In order to keep stdin open and control the outputs, we can use this command:
 #### 11
 
 TODO
-

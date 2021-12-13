@@ -1,4 +1,8 @@
 ---
+title: ---
+date: 2021-11-16
+---
+---
 title: Insertion Sort
 tags: #sorting
 ---

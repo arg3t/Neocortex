@@ -1,3 +1,7 @@
+---
+title: 1st Normal Form (1NF)
+date: 2021-12-13
+---
 ## 1st Normal Form (1NF)
 1st normal form is the simplest of the [[Normal Forms]], it has no requirements for different types of functional dependencies. It only has two requirements:
 * That the relations in the schema must be flat.

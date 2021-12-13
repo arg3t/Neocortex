@@ -1,3 +1,7 @@
+---
+title: krypton6
+date: 2021-11-16
+---
 ## krypton6
 
 When we pass a bunch of "A"s into to the encryption binary, we get a repeating pattern `EICTDGYIYZKTHNSIRFXYCPFUEOCKRN`. We can then simply use this to calculate the original text:

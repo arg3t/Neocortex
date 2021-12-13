@@ -1,3 +1,7 @@
+---
+title: Implementing Priority Queues
+date: 2021-12-13
+---
 ## Implementing Priority Queues
 There are two ways to implement [[Priority Queue]]s:
 

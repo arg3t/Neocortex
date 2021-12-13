@@ -1,3 +1,7 @@
+---
+title: Inserting and Removing and Elements to/from Heap
+date: 2021-12-13
+---
 ## Inserting and Removing and Elements to/from Heap
 
 ### Adding Elements
