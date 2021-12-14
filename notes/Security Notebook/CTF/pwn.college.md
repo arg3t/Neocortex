@@ -9,7 +9,7 @@ date: 2021-11-16T21:07:41+01:00
 
 We are asked to receive the flag in '/flag'. First, we write the assembly code corresponding to the shellcode that we want to generate:
 
-```asm
+```x86asm
 .global _start
 
 
