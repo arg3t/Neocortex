@@ -1,6 +1,6 @@
 ---
 title: ER Diagram Attributes
-date: 2021-11-23
+date: 2021-11-23T14:10:26+01:00
 ---
 ## ER Diagram Attributes
 Attributes can be represented in [[ER Diagrams]] using an ellipse connecting to an attribute. However, there other ways to do that as well.

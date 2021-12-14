@@ -1,6 +1,6 @@
 ---
 title: Big Omega Notation
-date: 2021-11-16
+date: 2021-11-16T21:07:41+01:00
 ---
 ## Big Omega Notation
 The big omega notation $\Omega(n)$ is basically the opposite of [[Big-Oh Notation]], what it does is that it shows the time an algorithm in the best-case relative to its input size, n. Here is how you calculate it:

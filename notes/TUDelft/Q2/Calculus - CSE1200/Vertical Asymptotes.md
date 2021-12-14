@@ -1,6 +1,6 @@
 ---
 title: Vertical Asymptotes
-date: 2021-11-25
+date: 2021-11-25T01:27:30+01:00
 ---
 ## Vertical Asymptotes
 Vertical asymptotes are asymptotes where the value of a function $f(x)$ is undefined at a certain point a and the function goes to infinity as x approaches x. Such asymptotes often occur in two cases:

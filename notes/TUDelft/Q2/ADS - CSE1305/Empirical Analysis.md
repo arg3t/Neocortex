@@ -1,6 +1,6 @@
 ---
 title: Empirical Analysis
-date: 2021-11-16
+date: 2021-11-16T21:07:41+01:00
 ---
 ## Empirical Analysis
 Empirical analysis is the process of running an algorithm with different input sizes and plotting/analyzin the change in input times overtime.

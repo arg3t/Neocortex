@@ -1,6 +1,6 @@
 ---
 title: Sentinel Nodes
-date: 2021-11-16
+date: 2021-11-16T21:07:41+01:00
 ---
 ## Sentinel Nodes
 Sometimes, when implementing [[Linked List]], especially [[Doubly Linked List]], it makes our job much easier to implement sentinel nodes. Sentinel nodes are basicaly *dummy* nodes that are defined with the list, called **header** and **tailer**. By using these dummy nodes, our job is greatly simplified due to several reasons:

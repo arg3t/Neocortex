@@ -1,6 +1,6 @@
 ---
-title: # XSS Vectors
-date: 2021-11-16
+title: XSS Vectors
+date: 2021-11-16T21:07:41+01:00
 ---
 # XSS Vectors
 ## XSS Vector Without Spaces, Using Throw

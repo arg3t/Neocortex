@@ -1,6 +1,6 @@
 ---
 title: 7 Important Functions
-date: 2021-11-16
+date: 2021-11-16T21:07:41+01:00
 ---
 ## 7 Important Functions
 

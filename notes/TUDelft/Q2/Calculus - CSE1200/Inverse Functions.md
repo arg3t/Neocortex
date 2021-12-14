@@ -1,6 +1,6 @@
 ---
 title: Inverse Functions
-date: 2021-11-24
+date: 2021-11-24T16:36:27+01:00
 ---
 ## Inverse Functions
 

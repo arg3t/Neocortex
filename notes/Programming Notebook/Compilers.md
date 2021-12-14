@@ -1,6 +1,6 @@
 ---
-title: # Anatomy of a compiler
-date: 2021-11-16
+title: Anatomy of a compiler
+date: 2021-11-16T21:07:41+01:00
 ---
 # Anatomy of a compiler
 
