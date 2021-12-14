@@ -1,3 +1,7 @@
+---
+title: XXE Injection
+date: 2021-11-16T21:07:41+01:00
+---
 # XXE Injection
 
 The XML format allows users to specify entities which can be used inside the XML document using the formant `&entityname;`. These entities can be fetched over the network or can be read from a file using payloads such as:

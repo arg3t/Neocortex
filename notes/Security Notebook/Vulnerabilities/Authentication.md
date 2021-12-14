@@ -1,3 +1,7 @@
+---
+title: Authentication
+date: 2021-11-16T21:07:41+01:00
+---
 # Authentication
 
 Authentication vulnerabilities are one of the simpler ones. Yet, due to obvious reasons, they can have very serious impacts. Finding authentication bugs usually have a puzzle-solving nature to them. Authentication is the process of identifying the identity of a person, this is what sets the difference between *authentication* and *authorisation*. Authorisation is the process of checking whether a user has access to a resource and permitting or denying requests for that resource based on the user\'s permissions.

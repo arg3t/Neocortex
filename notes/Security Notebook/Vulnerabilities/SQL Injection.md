@@ -1,3 +1,7 @@
+---
+title: SQL Injection
+date: 2021-11-16T21:07:41+01:00
+---
 # SQL Injection
 
 SQL injection vulnerabilities occur when developers fail to properly sanitise the parameters in an SQL query that are provided by users. You can use SQLi to leak data or mess with an application\'s logic.

@@ -1,3 +1,7 @@
+---
+title: Formulas From Grasple and Other places
+date: 2021-11-24T16:36:27+01:00
+---
 ## Formulas From Grasple and Other places
 
 * $$sin(arctan(x)) = \frac{x}{\sqrt{1 + x^2}}$$

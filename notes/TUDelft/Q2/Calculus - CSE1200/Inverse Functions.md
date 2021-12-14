@@ -1,3 +1,7 @@
+---
+title: Inverse Functions
+date: 2021-11-24T16:36:27+01:00
+---
 ## Inverse Functions
 
 When writing an inverse function, you write the function in the form  $y = ...$ and interchange the xs and ys. And change the form of the equation such that y is alone in one side of the equation. This does not always apply for polynomials. In the case of second-order polynomials for example, you use the formulae $\frac{-b \pm \sqrt{b^2-4ac}}{2a}$ . An  example of taking the inverse of the function $f(x) = x^2 - 4x + 7$ for $x \ge 2$.

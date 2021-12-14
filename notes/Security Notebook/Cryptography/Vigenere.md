@@ -1,3 +1,7 @@
+---
+title: The vigenere cipher
+date: 2021-11-16T21:07:41+01:00
+---
 ## The vigenere cipher
 
 The encrypted message and a key's value is added together and the result\'s modulo 26 is taken to prevent unprintable characters. Here is an example:

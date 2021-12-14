@@ -1,3 +1,7 @@
+---
+title: File Path Traversal
+date: 2021-11-16T21:07:41+01:00
+---
 # File Path Traversal
 
 File path traversal vulnerabilities allow an attacker to read/write arbitrary files in a web server. This ability can be used to leak sensitive information or, in case of writing, can be used to escalate to OS Command injection.

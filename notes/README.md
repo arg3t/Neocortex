@@ -1,3 +1,7 @@
+---
+title: Welcome!
+date: 2021-11-16T21:07:41+01:00
+---
 # Welcome!
 
 This is an online version of my zettelkasten. I use Obsidian to edit my notes
@@ -10,4 +14,3 @@ and thoughts. If you find it confusing, don't worry, stay calm and read the book
 [How to Take Smart
 Notes](https://www.amazon.com/How-Take-Smart-Notes-Nonfiction-ebook/dp/B06WVYW33Y)
 by Sönke Ahrens.
-

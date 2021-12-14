@@ -1,3 +1,7 @@
+---
+title: Anatomy of a compiler
+date: 2021-11-16T21:07:41+01:00
+---
 # Anatomy of a compiler
 
 [Compilation Diagram](./static/Anatomy_of_a_compiler/2021-06-06T13:21:22.png)

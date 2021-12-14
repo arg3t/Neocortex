@@ -1,3 +1,7 @@
+---
+title: The Squeeze Theorem
+date: 2021-11-24T18:41:59+01:00
+---
 ## The Squeeze Theorem
 When you take three funtions $f(x)$, $g(x)$ and $h(x)$ such that $f(x) \le g(x)
 \le h(x)$, but you can't calculate the limit of the function $g(x)$ at a value

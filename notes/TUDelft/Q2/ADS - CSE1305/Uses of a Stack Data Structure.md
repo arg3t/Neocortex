@@ -1,3 +1,7 @@
+---
+title: Uses of a Stack in Real Life
+date: 2021-11-23T09:00:33+01:00
+---
 ## Uses of a Stack in Real Life
 The [[Stack]] data structure is very useful in real-world
  
