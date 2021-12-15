@@ -1,6 +1,7 @@
 ---
 title: Big-Oh Notation
 date: 2021-11-16T21:07:41+01:00
+tags: ['cs', 'cs/math', 'cs/analysis']
 ---
 
 ## Big-Oh Notation

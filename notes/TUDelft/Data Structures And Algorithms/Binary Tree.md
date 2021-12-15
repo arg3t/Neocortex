@@ -1,6 +1,7 @@
 ---
 title: Binary Tree
 date: 2021-12-14T20:32:21+01:00
+tags: ['cs', 'cs/data-structures', 'cs/trees']
 ---
 ## Binary Tree
 A binary [[Tree]] is a tree with a few extra constraints added on top:

@@ -1,6 +1,7 @@
 ---
 title: Comparables and Comparators
 date: 2021-12-14T20:32:21+01:00
+tags: ['cs', 'cs/java', 'cs/doc']
 ---
 ## Comparables and Comparators
 In Java, there are two important interfaces, **comparable** and **comparator**.
