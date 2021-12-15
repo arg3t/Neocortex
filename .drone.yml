@@ -6,6 +6,7 @@ pipeline:
   structure:
     image: python
     commands:
+      - pip install pyyaml
       - python genstructure.py
   build:
       image: fr1nge/mdzk:latest
