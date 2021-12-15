@@ -1,6 +1,6 @@
 ---
 title: Transitive Dependency
-date: 2021-12-13
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Transitive Dependency
 Let's say in your [[Relational Model]], you have two [[Functional Dependency]]s as such:

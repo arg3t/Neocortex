@@ -1,6 +1,6 @@
 ---
 title: What makes a Relational Database Design Good?
-date: 2021-12-01
+date: 2021-12-14T20:32:21+01:00
 ---
 ## What makes a Relational Database Design Good?
 * **Minimal Redundancy:** The less a database repeats the data in it, the better.

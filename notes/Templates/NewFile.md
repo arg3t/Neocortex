@@ -7,9 +7,7 @@
   tR += "---"
 %>
 title:  <%* tR += `${title}` %>
-date: <% tp.date.now("YY-MM-DDThh:mm:ss.sTZD") %>
-created: <% tp.date.now("YY-MM-DDThh:mm:ss.sTZD") %>
-modified: <% tp.date.now("YY-MM-DDThh:mm:ss.sTZD") %>
+date: <% tp.date.now("YY-MM-DDThh:mm:ssTZ") %>
 description: 
 tags: ['']
 aliases: ['']

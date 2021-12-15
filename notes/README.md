@@ -14,3 +14,27 @@ and thoughts. If you find it confusing, don't worry, stay calm and read the book
 [How to Take Smart
 Notes](https://www.amazon.com/How-Take-Smart-Notes-Nonfiction-ebook/dp/B06WVYW33Y)
 by Sönke Ahrens.
+
+%%
+struct_eval_start
+%%
+```py
+from datetime import datetime, MINYEAR
+from dateutil import tz
+mintime=datetime(MINYEAR, 1, 1, tzinfo=tz.gettz('Europe/Amsterdam'))
+print(zettel.select("date", limit=10, default=mintime))
+```
+%%
+struct_eval_end
+%%
+
+Content continues here
+
+
+
+
+
+
+
+
+

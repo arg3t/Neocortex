@@ -1,6 +1,6 @@
 ---
 title: Heap
-date: 2021-12-13
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Heap
 A heap is basically a [[Binary Tree]] which is complete([[Full & Complete Trees]]) and every child of a parent node ([[Tree Terminology]]) has a value vale greater that or equal to the parent's value. 

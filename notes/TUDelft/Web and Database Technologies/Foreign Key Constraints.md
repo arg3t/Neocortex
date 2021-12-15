@@ -1,6 +1,6 @@
 ---
 title: Foreign Key Constraints
-date: 2021-12-01
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Foreign Key Constraints
 Sometimes, a relation might need to me make a reference to another relation. In those cases, we use the following notation:

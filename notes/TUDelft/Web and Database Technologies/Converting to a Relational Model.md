@@ -1,6 +1,6 @@
 ---
 title: Converting to a [[Relational Model]]
-date: 2021-12-13
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Converting to a [[Relational Model]]
 Even though [[ER Diagrams]] contain more semantic information, they are harder to turn into actual databases because some of the constraints are impossible to represent.

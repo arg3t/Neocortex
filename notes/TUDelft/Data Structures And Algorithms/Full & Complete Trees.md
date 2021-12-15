@@ -1,6 +1,6 @@
 ---
 title: Full vs Complete Binary Trees
-date: 2021-12-13
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Full vs Complete Binary Trees
 * In a *full*/*complete* [[Binary Tree]], every node has two children, except the leaf nodes.

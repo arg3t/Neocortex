@@ -3,6 +3,10 @@ pipeline:
     image: python
     commands:
       - python excalidrawtosvg.py
+  structure:
+    image: python
+    commands:
+      - python genstructure.py
   build:
       image: fr1nge/mdzk:latest
       commands:

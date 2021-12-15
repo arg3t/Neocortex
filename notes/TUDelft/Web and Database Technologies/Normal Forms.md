@@ -1,6 +1,6 @@
 ---
 title: Normal Forms
-date: 2021-12-13
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Normal Forms
 When designing a schema, one of the important steps is to choose a normal form that the schema will conform to. There are 7 normal forms. From *6NF* to *1NF* and *BCNF*:

@@ -1,6 +1,6 @@
 ---
 title: Functional Dependencies
-date: 2021-12-13
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Functional Dependencies
 If you have two sets of attributes, call them $X$ and $Y$, id $Y$ functionally depends on $X$, then two tuples which agree on their $X$ values must also agree on their $Y$ values. A functional dependency(denoted using  $X\to Y$) in subsets $X,Y\subseteq{A_1,...,A_n}$  means that for two arbitrary tuples $t_1$ and $t_2$:

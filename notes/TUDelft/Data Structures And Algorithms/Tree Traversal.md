@@ -1,6 +1,6 @@
 ---
 title: Tree Traversal
-date: 2021-12-13
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Tree Traversal
 [[Tree]] Traversal is the process of visiting/processing every node in a tree using a consistent method. Every traversal algorithm, has a time complexity in [[Big-Oh Notation]] $O(n)$ where n is the number of nodes in the tree. There are two types of three traversal methods:

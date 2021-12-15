@@ -1,6 +1,6 @@
 ---
 title: Relational Model
-date: 2021-12-01
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Relational Model
 A relational model, also known as a relational schema, is defined by the relations between the attributes between different entities, all of which are defined in the [[ER Diagrams]]. A relation schema, as you can guess by the name are defined using *relations* described with the form $R(A_1,...,A_n)$in which $R$ is a relation and $A_n$ are attributes.  Since relational schemas are basically a collection of different relations, they are represented as $S(R_1, R_2, R_3 ..., R_n)$ where $R_n$ are relations. The actual instance of a database is represented by tuples made from the attributes' domains. A relational model also has [[Integrity Constraints]] represented by $C$ which must be satisfied by all instances of *S*.

@@ -1,6 +1,6 @@
 ---
 title: Down-Heap Bubbling
-date: 2021-12-13
+date: 2021-12-14T20:32:21+01:00
 ---
 ## Down-Heap Bubbling
 Down-Heap bubbling is basically the reverse of [[Up-Heap Bubbling]],  when the **heap-order property** of a heap is broken due to a node that is not a leaf, you need to apply down-heap bubbling. It has two steps:
