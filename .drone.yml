@@ -6,7 +6,7 @@ pipeline:
   structure:
     image: python
     commands:
-      - pip install pyyaml
+      - pip install -r requirements.txt
       - python3 genstructure.py
   build:
       image: fr1nge/mdzk:latest
