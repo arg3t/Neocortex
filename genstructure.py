@@ -72,7 +72,7 @@ def scannotes(path, keys=[]):
                 notes += scannotes(os.path.join(path, n), keys=keys)
             else:
                 meta = markdownmeta(os.path.join(path, n))
-                entry = [None] * len(meta)
+                entry = [None] * max(len(meta), len(keys))
                 for k in meta:
                     if k not in keys:
                         keys.append(k)
