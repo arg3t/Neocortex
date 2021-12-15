@@ -94,7 +94,7 @@ def findandreplace(path):
                     new_content = parts[0]
                     second_parts = parts[1].split("\n%%\nstruct_eval_end\n%%")
                     code = "\n".join(second_parts[0].split("\n")[1:-1])
-                    if sys.argc < 2 or sys.argv[1] != "release":
+                    if len(sys.argv) < 2 or sys.argv[1] != "release":
                         new_content += "%%\nstruct_eval_start\n%%\n%%\n" + second_parts[0] + "\n%%\n%%\nstruct_eval_end\n%%\n"
 
                     f = StringIO()
