@@ -1,5 +1,8 @@
-.obsidian/cache
-.obsidian
-.trash/
 .DS_Store
-html
+public
+resources
+.idea
+content/.obsidian
+assets/indices/linkIndex.json
+assets/indices/contentIndex.json
+
