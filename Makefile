@@ -18,4 +18,5 @@ update-force: ## Forcefully pull all changes and don't ask to patch
 
 serve: ## Serve Quartz locally
 	# hugo-obsidian -input=content -output=assets/indices -index -root=.
+	python genstructure.py -n content -i assets/indices -I '^templates$' 'images/'
 	hugo server --enableGitInfo
