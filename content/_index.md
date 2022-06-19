@@ -1,22 +1,21 @@
 ---
-title: Welcome!
+title: Hello There!
 date: 2021-11-16T21:07:41+01:00
 ---
 
-I am Yigit, a first year Computer Science student at TU Delft. But this site is
-not about me, it is about my notes. If you want to learn more about to me, you
-can visit my [website](https://yigitcolakoglu.com), or my
-[blog](https://fr1nge.xyz).
+![hello there](images/hello_there.gif)
 
-This website is a published version of my zettelkasten. Here, I keep my notes,
-each of which I try to keep atomic. The notes are given tags according to the
-topics they are related to and also, most notes either contain links to other
-notes are linked to by other notes. These two principles allows structure to
-naturally emerge from the flat folder structure that makes the zettelkasten.
+This is where I keep my notes related to anything I learn. Since I am currently computer science student, most of the notes are centered around computer science and maths.  
 
-I am currently attending university in TU Delft I keep many notes related to
-CS, here is some of the recent ones:
+Once I get the time,  I will probably use this to take notes on my other thoughts as well as books I read. 
 
+I am creating this wiki using [Obsidian](https://obsidian.md/) and publishing it using [Github Pages](https://pages.github.com/) and [Quartz](https://github.com/jackyzha0/quartz)(It is really cool, you should check it out.). I have made a bunch of tweaks so that it fits my use case better, you can find the source code for the webite and my notes [here](https://github.com/theFr1nge/Neocortex).
+
+## If you are using firefox!
+Sorry, currently firefox is a little buggy and page loads don't work right. If you click a link, you can view the page by clicking F5.
+
+
+My most recent notes centered around **CS**:
 ```js-block
 function genIndex(arr, key, comparator){
 	return Array.from(Array(arr.length).keys())
