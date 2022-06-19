@@ -1,0 +1,7 @@
+<div class="js-codeblock">
+  <div id="{{- .Inner | md5 }}"></div>
+  <script>
+    let outputDiv = document.getElementById("{{- .Inner | md5 }}");  
+    {{- .Inner | safeJS }}
+  </script>
+<div>

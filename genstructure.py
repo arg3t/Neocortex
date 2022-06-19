@@ -9,113 +9,192 @@
 
 import os, sys
 import yaml
-from functools import total_ordering
-from io import StringIO
-from contextlib import redirect_stdout
+import re
 
-@total_ordering
-class MinType(object):
-    def __le__(self, other):
-        return True
+from json import JSONEncoder
+import json
+import datetime
 
-    def __eq__(self, other):
-        return (self is other)
+import argparse
 
-class Table:
-    def __init__(self, keys, entries):
-        self.keys = keys
-        self.entries = entries
+# Declare function to define command-line arguments
+def readOptions(args=sys.argv[1:]):
+  parser = argparse.ArgumentParser(description="Indice generator for quartz")
+  parser.add_argument("-n", "--notesdir", help="Directory where you keep your notes", required=True)
+  parser.add_argument("-i", "--indicedir", help="Directory where you want to store the indice files", required=True)
+  parser.add_argument("-I", "--ignore", nargs='+', help="Regex for ignoring")
+  opts = parser.parse_args(args)
+  return opts
 
-    def select(self, key, order=False, limit=0, default=MinType()):
-        keyindex = self.keys.index(key)
-        if limit > 0:
-            return sorted(self.entries, key=lambda x: x[keyindex] or default, reverse=order)[0:limit]
-        else:
-            return sorted(self.entries, key=lambda x: x[keyindex] or default, reverse=order)
+# Call the function to read the argument values
+options = readOptions(sys.argv[1:])
 
-
-IGNORE = [
-    "Excalidraw",
-    "Images",
-    ".obsidian",
-    "..gitignore"
-]
-
-zettel = None
+if options.ignore != None:
+    IGNORE = options.ignore
+else:
+    IGNORE = []
 
 def markdownmeta(path):
     with open(path, "r") as f:
         md = f.read()
 
     metadata = {}
+    portions = md.split("---\n")
     if md.startswith("---"):
-        metadata = yaml.safe_load(md.split("---\n")[1])
+        metadata = yaml.safe_load(portions[1])
 
-    metadata["file.folder"] = os.path.dirname(path)
-    metadata["file.name"] = os.path.basename(path)
-    metadata["file.path"] = path
-    metadata["file.mtime"] = os.path.getmtime(path)
-    metadata["file.ctime"] = os.path.getctime(path)
+    metadata["lastmodified"] = datetime.datetime.fromtimestamp(os.path.getmtime(path)).isoformat()
+    metadata["content"] = portions[2].strip()
 
     return metadata
 
-def fixSize(arr, size):
-    for i in range(len(arr)):
-        arr[i] = arr[i] + (None,) * (size - len(arr[i]))
-    return arr
+def balanceIndex(idx):
+    keys = set()
+    for i in idx:
+        keys.update(idx[i].keys())
 
-def scannotes(path, keys=[]):
-    notes = []
+    for i in idx:
+        for j in keys.difference(idx[i].keys()):
+            idx[i][j] = None
+
+def isIgnored(path):
+    for i in IGNORE:
+        if re.search(i, path):
+            return True
+    return False
+
+def chop(s, words):
+    for w in words:
+        if s.startswith(w):
+            s = s[len(w):]
+            return chop(s, words)
+
+        if s.endswith(w):
+            s = s[:-len(w)]
+            return chop(s, words)
+
+    return s
+
+def normalize(s):
+    allowedChars = ['.', '/', '\\', '_', '#', '+', '~']
+
+    res = ""
+    prependHyphen = False
+
+    for i in s:
+        isAllowed = i in allowedChars or i.isdigit() or i.isalpha()
+
+        if isAllowed:
+            if prependHyphen:
+                res += '-'
+                prependHyphen = False
+
+            res += i
+        elif len(res) > 0 and (i == '-' or i.isspace()):
+            prependHyphen = True
+
+
+    if not res.startswith("/"):
+        res = "/" + res
+
+    res = chop(res, ('.md', '.html'))
+
+    return res
+
+def scanLinks(path):
+    with open(path, "r") as f:
+        text = f.read().split('---\n')[2]
+
+    wiki_links = []
+    wiki_link_regex = r"\[\[(.*?)\]\]"
+    for match in re.finditer(wiki_link_regex, text):
+        out = {
+        }
+
+        if "|" in match.group(1):
+            out["target"], out["text"] = match.group(1).split("|")
+        else:
+            out["target"] = match.group(1)
+            out["text"] = match.group(1)
+
+        if isIgnored(out["target"]):
+            continue
+
+        out["target"] = normalize(out["target"])
+
+        # if the link ends with `_index` remove it
+        if out["target"].endswith("_index"):
+            out["target"] = out["target"][:-6]
+
+        out["source"] = normalize(path.strip('.'))
+
+        wiki_links.append(out)
+    return wiki_links
+
+
+def genLinkIndex(links):
+    idx = {"links" : {}, "backlinks" : {}}
+
+    for i in links:
+        if i["source"] not in idx["links"]:
+            idx["links"][i["source"]] = []
+        idx["links"][i["source"]].append(i)
+
+        foo = {}
+
+        foo["text"] = i["text"]
+        foo["target"] = i["source"]
+        foo["source"] = i["target"]
+
+        if i["target"] not in idx["backlinks"]:
+            idx["backlinks"][i["target"]] = []
+        idx["backlinks"][i["target"]].append(i)
+
+    return idx
+
+def scanNotesDir(path, notes, links):
     for n in os.listdir(path):
-        if n not in IGNORE:
+        if not isIgnored(n):
             if os.path.isdir(os.path.join(path, n)):
-                notes += scannotes(os.path.join(path, n), keys=keys)
+                scanNotesDir(os.path.join(path, n), notes, links)
             else:
-                meta = markdownmeta(os.path.join(path, n))
-                entry = [None] * len(keys)
-                for k in meta:
-                    if k not in keys:
-                        keys.append(k)
-                        entry.append(None)
-                    entry[keys.index(k)] = meta[k]
-                notes.append(tuple(entry))
+                if not n.startswith(".") and n.endswith('.md'):
+                    key = os.path.join(path, n).strip('.')
+                    if key == "/_index.md":
+                        key = "index"
 
-    return fixSize(notes, len(keys))
+                    notes[normalize(key)] = markdownmeta(os.path.join(path, n))
+                    links.extend(scanLinks(os.path.join(path, n)))
 
-def findandreplace(path):
-    for n in os.listdir(path):
-        if n not in IGNORE:
-            if os.path.isdir(os.path.join(path, n)):
-                findandreplace(os.path.join(path, n))
-            else:
-                with open(os.path.join(path, n), "r") as f:
-                    content = f.read()
-                if "%%\nstruct_eval_start\n%%" in content:
-                    parts = content.split("%%\nstruct_eval_start\n%%\n")
-                    new_content = parts[0]
-                    second_parts = parts[1].split("\n%%\nstruct_eval_end\n%%")
-                    code = "\n".join(second_parts[0].split("\n")[1:-1])
-                    if len(sys.argv) < 2 or sys.argv[1] != "release":
-                        new_content += "%%\nstruct_eval_start\n%%\n%%\n" + second_parts[0] + "\n%%\n%%\nstruct_eval_end\n%%\n"
+def scanNotes(path):
+    notes = {}
+    links = []
+    scanNotesDir(path, notes, links)
+    balanceIndex(notes)
+    linkIndex = {"index" : genLinkIndex(links), "links" : links}
+    return notes, linkIndex
 
-                    f = StringIO()
-                    with redirect_stdout(f):
-                        exec(code)
-                    sout = f.getvalue()
-                    new_content += sout + second_parts[1]
-                    with open(os.path.join(path, n), "w") as f:
-                        f.write(new_content)
+# subclass JSONEncoder
+class DateTimeEncoder(JSONEncoder):
+        #Override the default method
+        def default(self, obj):
+            if isinstance(obj, (datetime.date, datetime.datetime)):
+                return obj.isoformat()
 
 def main():
-    global zettel
+    root = os.getcwd()
 
-    notesdir = "notes/"
-    keys = []
-    notes = scannotes(notesdir, keys=keys)
+    os.chdir(options.notesdir)
 
-    print("Done scanning notes, found %s notes" % len(notes))
-    zettel = Table(keys,notes)
-    findandreplace(notesdir)
+    contentIndex, linkIndex = scanNotes('./')
+
+    os.chdir(root)
+
+    with open(os.path.join(options.indicedir, "linkIndex.json"), "w") as f:
+        f.write(json.dumps(linkIndex, indent=4, cls=DateTimeEncoder))
+
+    with open(os.path.join(options.indicedir, "contentIndex.json"), "w") as f:
+        f.write(json.dumps(contentIndex, indent=4, cls=DateTimeEncoder))
 
 if __name__ == "__main__":
     main()

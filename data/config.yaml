@@ -1,0 +1,18 @@
+name: Yigit Colakoglu
+enableToc: false
+openToc: false
+enableLinkPreview: true
+enableLatex: true
+enableSPA: true
+enableFooter: true
+enableContextualBacklinks: true
+enableRecentNotes: false
+description:
+  This is my public wiki where I keep my notes related to computer science, security, and maths.
+page_title:
+  "Neocortex 🧠"
+links:
+  - link_name: Twitter
+    link: https://twitter.com/theFr1nge
+  - link_name: Github
+    link: https://github.com/theFr1nge

@@ -1,0 +1,7 @@
+<div class="gnuplot">
+  <div class="code" hidden>
+    {{- .Inner | safeHTML }}
+  </div>
+  <img class="output"/>
+</div>
+{{ .Page.Store.Set "hasGnuplot" true }}
