@@ -1,6 +1,6 @@
-baseURL = "https://wiki.fr1nge.xyz/"
+baseURL = "https://wiki.yigit.run/"
 languageCode = "en-us"
-googleAnalytics = "G-XYFD95KB4J"
+googleAnalytics = ""
 pygmentsUseClasses = true
 relativeURLs = false
 disablePathToLower = true
