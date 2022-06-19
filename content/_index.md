@@ -17,7 +17,6 @@ naturally emerge from the flat folder structure that makes the zettelkasten.
 I am currently attending university in TU Delft I keep many notes related to
 CS, here is some of the recent ones:
 
-
 ```js-block
 function genIndex(arr, key, comparator){
 	return Array.from(Array(arr.length).keys())

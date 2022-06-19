@@ -166,12 +166,24 @@ def scanNotesDir(path, notes, links):
                     notes[normalize(key)] = markdownmeta(os.path.join(path, n))
                     links.extend(scanLinks(os.path.join(path, n)))
 
+def extendLinkIndexWithTags(links, notes):
+    taglinks = []
+    for n in notes:
+        note = notes[n]
+        if not note['tags']:
+            continue
+        for t in note['tags']:
+            link = {"target" : n, "source" : f"/tags/{t}", "text" : t}
+            taglinks.append(link)
+    links["links"].extend(taglinks)
+
 def scanNotes(path):
     notes = {}
     links = []
     scanNotesDir(path, notes, links)
     balanceIndex(notes)
     linkIndex = {"index" : genLinkIndex(links), "links" : links}
+    extendLinkIndexWithTags(linkIndex, notes)
     return notes, linkIndex
 
 # subclass JSONEncoder
