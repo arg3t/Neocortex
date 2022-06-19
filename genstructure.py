@@ -40,6 +40,8 @@ def markdownmeta(path):
 
     metadata = {}
     portions = md.split("---\n")
+    if len(portions) < 3:
+        return None
     if md.startswith("---"):
         metadata = yaml.safe_load(portions[1])
 
@@ -163,7 +165,10 @@ def scanNotesDir(path, notes, links):
                     if key == "/_index.md":
                         key = "index"
 
-                    notes[normalize(key)] = markdownmeta(os.path.join(path, n))
+                    foo = markdownmeta(os.path.join(path, n))
+                    if not foo:
+                        continue
+                    notes[normalize(key)] = foo
                     links.extend(scanLinks(os.path.join(path, n)))
 
 def extendLinkIndexWithTags(links, notes):
