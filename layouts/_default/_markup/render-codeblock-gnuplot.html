@@ -1,7 +1,25 @@
+{{ $size := "" }}
+{{- $n := 0 }}
+
+{{ if hasPrefix (index (split .Inner "\n") 0) "size: "}}
+  {{ $size = strings.TrimPrefix "size: " (index (split .Inner "\n") 0) }}
+  {{ $n = add $n 1}}
+{{ end }}
+
+{{ $trimmed := slice }}
+
+{{ range split .Inner "\n" }}
+  {{ if le $n 0}}
+    {{ $trimmed = append . $trimmed }}
+  {{ else }}
+    {{ $n = sub $n 1 }} 
+  {{ end }}
+{{ end }}
+
 <div class="gnuplot">
-  <img height = "350em" class="output"/>
+  <img {{ if $size | ne "" }} height="{{ $size }}em"{{ end }}class="output"/>
   <div class="code" hidden>
-    {{- .Inner | safeHTML }}
+    {{- delimit $trimmed "\n" | chomp | safeHTML}}
   </div>
 </div>
 {{ .Page.Store.Set "hasGnuplot" true }}

@@ -4,7 +4,11 @@ date: 2021-11-16T21:07:41+01:00
 tags: ['math/analysis', 'cs/analysis']
 ---
 
-![7 Functions' Graphs](images/2809E595-B410-465A-B5E4-65486A4A3C40.jpeg)
+```plot
+set xrange [0:10**2]
+set yrange [0:10**2]
+plot exp(2*x), x**3, x**2, x*log(x), x, log(x), 2
+```
 
 When calculating the [[/notes/Big-Oh Notation|Big-Oh Notation]] of a function it is important to know the order of these functions.
 
