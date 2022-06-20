@@ -185,7 +185,7 @@ def extendLinkIndexWithTags(links, notes):
         if not note['tags']:
             continue
         for t in note['tags']:
-            link = {"target" : n, "source" : f"/tags/{t}", "text" : t}
+            link = {"target" : n, "source" : f"/tags/{t}", "text" : t, 'tag': True}
             taglinks.append(link)
             parent = getParentTag(t)
             if parent:
@@ -195,7 +195,7 @@ def extendLinkIndexWithTags(links, notes):
 
     for p in tagHierarchy:
         for t in tagHierarchy[p]:
-            link = {"target" : f"/tags/{t}", "source" : f"/tags/{p}", "text" : p}
+            link = {"target" : f"/tags/{t}", "source" : f"/tags/{p}", "text" : p, 'tag': True}
             taglinks.append(link)
     links["links"].extend(taglinks)
 
