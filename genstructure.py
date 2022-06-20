@@ -171,14 +171,31 @@ def scanNotesDir(path, notes, links):
                     notes[normalize(key)] = foo
                     links.extend(scanLinks(os.path.join(path, n)))
 
+def getParentTag(tag):
+    if '/' not in tag:
+        return None
+
+    return '/'.join(tag.split('/')[:-1])
+
 def extendLinkIndexWithTags(links, notes):
     taglinks = []
+    tagHierarchy = {}
     for n in notes:
         note = notes[n]
         if not note['tags']:
             continue
         for t in note['tags']:
             link = {"target" : n, "source" : f"/tags/{t}", "text" : t}
+            taglinks.append(link)
+            parent = getParentTag(t)
+            if parent:
+                if parent not in tagHierarchy:
+                    tagHierarchy[parent] = set()
+                tagHierarchy[parent].add(t)
+
+    for p in tagHierarchy:
+        for t in tagHierarchy[p]:
+            link = {"target" : f"/tags/{t}", "source" : f"/tags/{p}", "text" : p}
             taglinks.append(link)
     links["links"].extend(taglinks)
 
