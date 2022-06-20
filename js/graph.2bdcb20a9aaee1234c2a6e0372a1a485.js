@@ -56,6 +56,10 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
       return "var(--g-node-active)"
     }
 
+    if (d.id.startsWith('/tags/')) {
+      return "var(--g-node-tag)"
+    }
+
     for (const pathColor of pathColors) {
       const path = Object.keys(pathColor)[0]
       const colour = pathColor[path]
@@ -179,7 +183,9 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
       ])
       const neighbourNodes = d3.selectAll(".node").filter((d) => neighbours.includes(d.id))
       const currentId = d.id
-      window.Million.prefetch(new URL(`${baseUrl}${decodeURI(d.id).replace(/\s+/g, "-")}/`))
+      if(!d.id.startsWith('/tags/')){
+        window.Million.prefetch(new URL(`${baseUrl}${decodeURI(d.id).replace(/\s+/g, "-")}/`))
+      }
       const linkNodes = d3
         .selectAll(".link")
         .filter((d) => d.source.id === currentId || d.target.id === currentId)
