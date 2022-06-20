@@ -12,4 +12,3 @@ description:
 tags: ['']
 aliases: ['']
 ---
-# <%* tR += `${title}` %>

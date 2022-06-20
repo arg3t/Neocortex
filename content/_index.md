@@ -9,7 +9,7 @@ This is where I keep my notes related to anything I learn. Since I am currently 
 
 Once I get the time,  I will probably use this to take notes on my other thoughts as well as books I read. 
 
-I am creating this wiki using [Obsidian](https://obsidian.md/) and publishing it using [Github Pages](https://pages.github.com/) and [Quartz](https://github.com/jackyzha0/quartz)(It is really cool, you should check it out.). I have made a bunch of tweaks so that it fits my use case better, you can find the source code for the webite and my notes [here](https://github.com/theFr1nge/Neocortex).
+You can find the details on how I take my notes and how I publish them [[notes/Taking Notes With Obsidian|here]].
 
 ## If you are using firefox!
 Sorry, currently firefox is a little buggy and page loads don't work right. If you click a link, you can view the page by clicking F5.
