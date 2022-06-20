@@ -1,5 +1,5 @@
 {{- $n := 0 }}
-{{- $type := "failure" }}
+{{- $type := "abstract" }}
 {{- $title := humanize $type }}
 
 {{ if hasPrefix (index (split .Inner "\n") $n) "title: "}}

@@ -1,8 +1,38 @@
-{{- $inner := .Inner | .Page.RenderString -}}
-{{- $type := "note" }}
-{{- $icon := .Attributes.icon | default "note" }}
-{{- $title := .Attributes.title | default "Note" }}
-{{- $collapsed := .Attributes.collapsed | default false }}
+{{- $n := 0 }}
+{{- $type := "info" }}
+{{- $title := humanize $type }}
+
+{{ if hasPrefix (index (split .Inner "\n") $n) "title: "}}
+  {{ $title = strings.TrimPrefix "title: " (index (split .Inner "\n") $n) }}
+  {{ $n = add $n 1}}
+{{ end }}
+
+{{- $icon := $type }}
+
+{{ if hasPrefix (index (split .Inner "\n") $n) "icon: "}}
+  {{ $icon = strings.TrimPrefix "icon: " (index (split .Inner "\n") $n) }}
+  {{ $n = add $n 1}}
+{{ end }}
+
+{{- $collapsed := false }}
+
+{{ if hasPrefix (index (split .Inner "\n") $n) "collapse: "}}
+  {{ $collapsed = true}}
+  {{ $n = add $n 1}}
+{{ end }}
+
+{{ $trimmed := slice }}
+
+{{ range split .Inner "\n" }}
+  {{ if le $n 0}}
+    {{ $trimmed = append . $trimmed }}
+  {{ else }}
+    {{ $n = sub $n 1 }} 
+  {{ end }}
+{{ end }}
+
+{{- $inner := delimit $trimmed "\n" | chomp | .Page.RenderString -}}
+
 
 {{- $iconMap := dict "note" "fa-solid fa-pencil-alt fa-fw" -}}
 {{- $iconMap  = dict "abstract" "fa-solid fa-list-ul fa-fw" | merge $iconMap -}}
