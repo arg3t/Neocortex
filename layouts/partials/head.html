@@ -17,6 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap"
     rel="stylesheet"
   />
+
   {{$sass := resources.Match "styles/[!_]*.scss" }}
   {{$css := slice }}
   {{range $sass}}
@@ -25,6 +26,9 @@
   {{end}}
   {{$finalCss := $css | resources.Concat "styles.css" | resources.Fingerprint "md5" | resources.Minify  }}
   <link href="{{$finalCss.Permalink}}" rel="stylesheet" />
+
+  {{ $fontawesome := resources.Get "lib/fontawesome.min.css" | resources.Fingerprint "md5"}}
+  <link href="{{$fontawesome.Permalink}}" rel="stylesheet" />
 
   {{ $gnuplotApi := resources.Get "js/gnuplot_api.js" | resources.Fingerprint "md5" | resources.Minify }}
   <script src="{{$gnuplotApi.Permalink}}"></script>

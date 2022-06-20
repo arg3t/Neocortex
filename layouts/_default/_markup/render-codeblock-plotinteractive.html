@@ -1,0 +1,7 @@
+<div class="gnuplot">
+  <img height = "350em" class="output"/>
+  <textarea class="code" onchange="GnuplotRenderer.render(this.parentElement.querySelector('.output'), this.value);">
+      {{- .Inner | safeHTML }}
+  </textarea>
+</div>
+{{ .Page.Store.Set "hasGnuplot" true }}

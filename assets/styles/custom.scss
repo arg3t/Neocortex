@@ -41,3 +41,32 @@
     }
   }
 }
+
+.tags.inline {
+  display: inline;
+  & > li {
+    display: inline-block;
+    margin-left: 0.4em;
+  }
+
+  & > li > a {
+    border: var(--outlinegray) 1px solid;
+    padding: 0.05em 0.3em;
+    &::before {
+      content: "#";
+      margin-right: 0.3em;
+      color: var(--outlinegray);
+    }
+  }
+}
+
+.gnuplot textarea.code { 
+  padding-right: 0; 
+  margin-left: auto; 
+  font-size: 16px; 
+  margin-right: auto;
+  display: block;
+  font-family: monospace; 
+  width: 30%; 
+  resize: none;
+}
