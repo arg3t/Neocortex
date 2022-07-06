@@ -13,10 +13,6 @@ You can find the details on how I take my notes and how I publish them [[notes/T
 
 If you want, I also keep [an index of all the notes I have taken](/notes).
 
-## If you are using firefox!
-Sorry, currently firefox is a little buggy and page loads don't work right. If you click a link, you can view the page by clicking F5.
-
-
 My most recent notes centered around **CS**:
 ```js-block
 function genIndex(arr, key, comparator){

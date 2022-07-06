@@ -3,16 +3,20 @@ enableToc: false
 openToc: false
 enableLinkPreview: true
 enableLatex: true
+enableCodeBlockTitle: false
+enableCodeBlockCopy: true
 enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: false
+enableGitHubEdit: false
+GitHubLink: https://github.com/jackyzha0/quartz/tree/hugo/content
 description:
   This is my public wiki where I keep my notes related to computer science, security, and maths.
 page_title:
   "Neocortex 🧠"
 links:
   - link_name: Twitter
-    link: https://twitter.com/theFr1nge
+    link: https://twitter.com/yigitclkl
   - link_name: Github
     link: https://github.com/theFr1nge
