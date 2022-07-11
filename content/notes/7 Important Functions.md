@@ -10,7 +10,7 @@ set yrange [0:10**2]
 plot exp(2*x), x**3, x**2, x*log(x), x, log(x), 2
 ```
 
-When calculating the [[/notes/Big-Oh Notation|Big-Oh Notation]] of a function it is important to know the order of these functions.
+When calculating the [[notes/Big-Oh Notation|Big-Oh Notation]] of a function it is important to know the order of these functions.
 
 ## Constant function
 A very simple function in the form $f(n) = c$ where c is a constant. 

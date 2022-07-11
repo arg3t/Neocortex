@@ -5,7 +5,7 @@ description:
 tags: ['math/calculus']
 aliases: ['']
 ---
-Calculating [[/notes/Double Integrals Over Rectangles|Double Integrals Over Rectangles]] is nice, but do you know what is nicer? Calculating double integrals over any area. All the cool kids do it these days. Am I too high on caffeine while writing this note? Irrelevant. What is relevant is how you calculate the integral of a [[/notes/Multivariable Functions|multivariable function]] over any area $A$. What you do is you split the area into two functions, and the functions you pick actually define how you calculate the integral. There are two possible cases depending on the regions you want to calculate:
+Calculating [[notes/Double Integrals Over Rectangles|Double Integrals Over Rectangles]] is nice, but do you know what is nicer? Calculating double integrals over any area. All the cool kids do it these days. Am I too high on caffeine while writing this note? Irrelevant. What is relevant is how you calculate the integral of a [[notes/Multivariable Functions|multivariable function]] over any area $A$. What you do is you split the area into two functions, and the functions you pick actually define how you calculate the integral. There are two possible cases depending on the regions you want to calculate:
 
 ## Type 1 Regions
 A graph is said to be type 1 if it lies between the graph of two functions of $x$. For a type 1 graph, you write down two functions $g_1(x)$ and $g_2(x)$ which form the region $A$ between the lines $y=a$ and $y=b$. Once you have got these functions, it is simple:

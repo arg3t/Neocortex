@@ -5,7 +5,7 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-The product of a matrix $A$ and a [[/notes/Vectors|vector]] $v$ can be written as:
+The product of a matrix $A$ and a [[notes/Vectors|vector]] $v$ can be written as:
 
 $$
 Ax = 

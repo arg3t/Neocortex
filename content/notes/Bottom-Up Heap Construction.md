@@ -24,7 +24,7 @@ graph TD
 	L((5)) --- G((15)) & H((16))
 ```
 
-3. Apply [[/notes/Down Heap Bubbling|Down-Heap Bubbling]] on each heap.
+3. Apply [[notes/Down Heap Bubbling|Down-Heap Bubbling]] on each heap.
 
 ```mermaid
 graph TD
@@ -44,7 +44,7 @@ graph TD
 	L((16)) --- G((15)) & H((5))
 ```
 
-3. Apply [[/notes/Down Heap Bubbling|Down-Heap Bubbling]] on each heap.
+3. Apply [[notes/Down Heap Bubbling|Down-Heap Bubbling]] on each heap.
 
 ```mermaid
 graph TD
@@ -55,7 +55,7 @@ graph TD
 	K((12)) --- E((4)) & F((2))
 	L((15)) --- G((10)) & H((5))
 ```
-4. Finally, add the last element in the list and apply [[/notes/Down Heap Bubbling|Down-Heap Bubbling]] one final time.
+4. Finally, add the last element in the list and apply [[notes/Down Heap Bubbling|Down-Heap Bubbling]] one final time.
 ```mermaid
 graph TD
 	O((16)) --- M & N

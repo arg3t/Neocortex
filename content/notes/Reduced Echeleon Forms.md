@@ -5,7 +5,7 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-Reduced echeleon forms are a specialized form of [[/notes/Echeleon Forms|Echeleon Forms]] which is:
+Reduced echeleon forms are a specialized form of [[notes/Echeleon Forms|Echeleon Forms]] which is:
 
 $$
 \begin{bmatrix}

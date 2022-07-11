@@ -5,6 +5,6 @@ description:
 tags: ['math/calculus']
 aliases: ['']
 ---
-When working with polynomials, if a polynomial has a solution that has a [[/notes/Complex Numbers|complex part]], then the **complex conjugate** of this number is also a solution to the polynomial.
+When working with polynomials, if a polynomial has a solution that has a [[notes/Complex Numbers|complex part]], then the **complex conjugate** of this number is also a solution to the polynomial.
 
 > The complex conjugate for a number $z = a + bi$ is $\bar z = a - bi$

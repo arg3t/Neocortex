@@ -5,7 +5,7 @@ description:
 tags: ['cs/algorithms']
 aliases: ['']
 ---
-Checking whether a [[/notes/Graphs|graph]] is a [[/notes/Directed Acyclic Graphs|Directed Acyclic Graphs]] is a trivial problem. First off, we need to know that for a graph to be a DAG, there must exit at least one vertice with $0$ incoming edges, otherwise, it cannot be a DAG(go figure out why yourself, you nitwit). After accepting the proposition, it is easy to find the topological ordering of the graph using the following algorithm:
+Checking whether a [[notes/Graphs|graph]] is a [[notes/Directed Acyclic Graphs|Directed Acyclic Graphs]] is a trivial problem. First off, we need to know that for a graph to be a DAG, there must exit at least one vertice with $0$ incoming edges, otherwise, it cannot be a DAG(go figure out why yourself, you nitwit). After accepting the proposition, it is easy to find the topological ordering of the graph using the following algorithm:
 
 ```
 pick a vertice with 0 incoming edges

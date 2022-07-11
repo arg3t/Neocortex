@@ -4,7 +4,7 @@ date: 2021-11-16T21:07:41+01:00
 ---
 
 
-When solving [[/notes/Vigenere|The vigenere cipher]], if we know the key's length. let's call it *n*, we can split the string into n blocks so that we have *n* unique strings that can be treated as separate english texts and run a frequency analysis on each of the blocks. This way, we can separately calculate each character of the key. Here is a small python script that aims to solve vigenere with known key length. If the key length is unknown, this function can be called over and over with different key lengths:
+When solving [[notes/Vigenere|The vigenere cipher]], if we know the key's length. let's call it *n*, we can split the string into n blocks so that we have *n* unique strings that can be treated as separate english texts and run a frequency analysis on each of the blocks. This way, we can separately calculate each character of the key. Here is a small python script that aims to solve vigenere with known key length. If the key length is unknown, this function can be called over and over with different key lengths:
 
 ```python
 def letter_freq(string):

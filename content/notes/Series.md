@@ -5,7 +5,7 @@ description:
 tags: ['math/analysis', 'math/calculus']
 aliases: ['']
 ---
-Series are closely related to [[/notes/Sequences|Sequences]]. Basically a series is the sum of the first $k$ elements in a given series.  A serie is written as:
+Series are closely related to [[notes/Sequences|Sequences]]. Basically a series is the sum of the first $k$ elements in a given series.  A serie is written as:
 $$
 S_k = \sum^k_{n=1}a_n
 $$

@@ -2,7 +2,7 @@
 title: Transitive Dependency
 date: 2021-12-14T20:32:21+01:00
 ---
-Let's say in your [[/notes/Relational Model|Relational Model]], you have two [[/notes/Functional Dependency|Functional Dependencies]]s as such:
+Let's say in your [[notes/Relational Model|Relational Model]], you have two [[notes/Functional Dependency|Functional Dependencies]]s as such:
 
 ```
 {A} -> {B}

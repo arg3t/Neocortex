@@ -5,7 +5,7 @@ description:
 tags: ['cs/data-structures', 'cs/trees']
 aliases: ['']
 ---
-Red-Black trees are a type of [[/notes/Binary Search Trees|Binary Search Trees]] which aim to keep the tree balanced by adding an extra property into each node, whether it is red or black and enforcing a set of properties:
+Red-Black trees are a type of [[notes/Binary Search Trees|Binary Search Trees]] which aim to keep the tree balanced by adding an extra property into each node, whether it is red or black and enforcing a set of properties:
 
 - **Root Property:**  The root of red-black tree is black
 - **External Property:** Every external node is black

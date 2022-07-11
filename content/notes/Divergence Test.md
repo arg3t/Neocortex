@@ -5,7 +5,7 @@ description:
 tags: ['math/analysis', 'math/calculus']
 aliases: ['']
 ---
-The divergence test is pretty much the least useless one. All it does is that it checks if a [[/notes/Series|Series]] is not [[/notes/Convergent Series|convergent]]. The idea is that a series
+The divergence test is pretty much the least useless one. All it does is that it checks if a [[notes/Series|Series]] is not [[notes/Convergent Series|convergent]]. The idea is that a series
 
 $$
 S = \sum_{n=0}^\infty a_n

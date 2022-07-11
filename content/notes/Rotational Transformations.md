@@ -5,7 +5,7 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-[[/notes/Linear Transformations|Linear Transformations]] alter the coordinate system such that the origin stays the same. So, they are useful for representing rotations using matrices. In order to represent a rotation with angle $\varphi$, you can use the matrice below:
+[[notes/Linear Transformations|Linear Transformations]] alter the coordinate system such that the origin stays the same. So, they are useful for representing rotations using matrices. In order to represent a rotation with angle $\varphi$, you can use the matrice below:
 
 $$
 \begin{bmatrix}

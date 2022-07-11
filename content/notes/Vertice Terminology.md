@@ -6,7 +6,7 @@ tags: ['cs/data-structures']
 aliases: ['']
 ---
 
-A [[/notes/Graphs|graph]] is made up of edges and vertices.
+A [[notes/Graphs|graph]] is made up of edges and vertices.
 
 * **End Vertices:** The vertices that are connected by an edge.
 * **Origin:** First endpoint of vertice.

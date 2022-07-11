@@ -5,7 +5,11 @@ description:
 tags: ['cs/algorithms', 'cs/data-structures', 'cs/trees']
 aliases: ['']
 ---
-Deleting from a [[/notes/Binary Search Trees|binary search tree]] can be a tricky process since we want to sustain the BST property of the tree upon deletion. We can split the deletion of a node into three cases depending on how many children that node has.
+
+Deleting from a [[notes/Binary Search Trees|binary search tree]] can be a tricky
+process since we want to sustain the BST property of the tree upon deletion. We
+can split the deletion of a node into three cases depending on how many children
+that node has.
 
 ##  No Children
 Just remove the node.

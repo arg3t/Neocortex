@@ -12,4 +12,4 @@ For instance, in the table:
 | 1 | yigit | Java|
 | 2 | ipek| Web and Database|
 
-When you delete the student yigit, all information on the class Java is lost. In order to prevent such cases, it is a good idea to apply [[/notes/Relational Database Normalization|Normalizing a Relational Model]] to your database.
+When you delete the student yigit, all information on the class Java is lost. In order to prevent such cases, it is a good idea to apply [[notes/Relational Database Normalization|Normalizing a Relational Model]] to your database.

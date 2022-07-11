@@ -5,7 +5,7 @@ description:
 tags: ['cs/algorithms']
 aliases: ['']
 ---
-In order to create the minimum spanning tree of a [[/notes/Graphs|graph]], the kruskal's algorithm takes the following approach:
+In order to create the minimum spanning tree of a [[notes/Graphs|graph]], the kruskal's algorithm takes the following approach:
 
 - Save each of the edges into a priority queue
 - Create $n$ clusters, each containing one of the vertices.

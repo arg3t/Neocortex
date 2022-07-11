@@ -5,7 +5,7 @@ description:
 tags: ['math/analysis', 'math/calculus']
 aliases: ['']
 ---
-Similar to the [[/notes/Comparison Test|Comparison Test]], given two series, $\sum a_n$ and $\sum b_n$ all with positive terms, calculating the limit:
+Similar to the [[notes/Comparison Test|Comparison Test]], given two series, $\sum a_n$ and $\sum b_n$ all with positive terms, calculating the limit:
 
 $$
 \lim_{n\to\infty}\frac{a_n}{b_n} = c

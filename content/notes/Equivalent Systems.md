@@ -5,4 +5,4 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-Two linear systems are equivalent if they have the same [[/notes/Solutions of Linear Systems|solutions]].
+Two linear systems are equivalent if they have the same [[notes/Solutions of Linear Systems|solutions]].

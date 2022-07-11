@@ -5,7 +5,7 @@ description: A recursive sorting algorithm based on a divide and conquer approac
 tags: [ 'cs/sorting', 'cs/algorithms']
 aliases: ['']
 ---
-Merge sort is a sorting algorithm based on a divide and conquer approach. Basically in merge-sort, a list is halved and sorted and then the sorted parts are then [[/notes/Merging in Merge Sort|merged]]. The halving operation is repeated until the halved list is of size 1 at this point, the recursion stops. In the end, drawing a graph of all the recursive calls gives us a complete binary tree [[/notes/Full & Complete Trees|Full vs Complete Binary Trees]]. 
+Merge sort is a sorting algorithm based on a divide and conquer approach. Basically in merge-sort, a list is halved and sorted and then the sorted parts are then [[notes/Merging in Merge Sort|merged]]. The halving operation is repeated until the halved list is of size 1 at this point, the recursion stops. In the end, drawing a graph of all the recursive calls gives us a complete binary tree [[notes/Full & Complete Trees|Full vs Complete Binary Trees]]. 
 
 ## An example merge-sort implementation
 ```java

@@ -5,10 +5,10 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-The basis vectors of a [[/notes/Subspace|Subspace]] $W$ is a set of vectors that are:
+The basis vectors of a [[notes/Subspace|Subspace]] $W$ is a set of vectors that are:
 
-1. [[/notes/Linear Indepence and Dependence|Linearly independent]]
-2. [[/notes/Vector Span|Span]] $W$
+1. [[notes/Linear Indepence and Dependence|Linearly independent]]
+2. [[notes/Vector Span|Span]] $W$
 
 > A subspace can have more than one basis
 

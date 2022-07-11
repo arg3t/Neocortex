@@ -5,7 +5,7 @@ description:
 tags: ['math/calculus']
 aliases: ['']
 ---
-Fubini's theorem for [[/notes/Double Integrals Over Rectangles|Double Integrals Over Rectangles]] is that for a rectangle $D = [a,b] \times [c,d]$ the integral can be written as:
+Fubini's theorem for [[notes/Double Integrals Over Rectangles|Double Integrals Over Rectangles]] is that for a rectangle $D = [a,b] \times [c,d]$ the integral can be written as:
 
 $$
 \iint_D f(x,y)dA = \int_a^b\int_c^df(x,y)dydx = \int_c^d\int_a^bf(x,y)dxdy

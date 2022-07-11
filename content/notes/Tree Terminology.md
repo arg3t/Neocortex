@@ -2,7 +2,7 @@
 title: Important Tree Terminology
 date: 2021-12-14T20:32:21+01:00
 ---
-[[/notes/Tree|Tree]]s have some important terminology.
+[[notes/Tree|Tree]]s have some important terminology.
 
 ```mermaid
 graph TD

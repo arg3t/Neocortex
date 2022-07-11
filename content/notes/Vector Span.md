@@ -5,7 +5,7 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-The span of $n$ [[/notes/Vectors|Vectors]] is basically all the [[/notes/Linear Combinations|Linear Combinations]] of those vectors. And is written as:
+The span of $n$ [[notes/Vectors|Vectors]] is basically all the [[notes/Linear Combinations|Linear Combinations]] of those vectors. And is written as:
 
 $$
 Span{v_1, v_2, ..., v_3}

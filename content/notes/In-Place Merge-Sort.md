@@ -5,7 +5,7 @@ description:
 tags: ['cs/sorting', 'cs/java']
 aliases: ['']
 ---
-It is sometimes more efficient to implement [[/notes/Merge Sort|Merge Sort]] in-place. Here is an implementation that sorts an two-dimensional array of strings according to a column, the explanations are made as comments:
+It is sometimes more efficient to implement [[notes/Merge Sort|Merge Sort]] in-place. Here is an implementation that sorts an two-dimensional array of strings according to a column, the explanations are made as comments:
 
 ```java
 public static void merge(String[][] in, String[][] out, int start, int inc, int col){

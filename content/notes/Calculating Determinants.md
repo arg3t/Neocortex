@@ -5,7 +5,7 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-Calculating [[/notes/Determinant|determinants]] with the concept of [[/notes/Cofactor|cofactor]] is relatively straight forward. Given an $n \times m$ matrix $A$, the determinant is defined by one of the following formulas:
+Calculating [[notes/Determinant|determinants]] with the concept of [[notes/Cofactor|cofactor]] is relatively straight forward. Given an $n \times m$ matrix $A$, the determinant is defined by one of the following formulas:
 
 $$
 \forall k \leq m : det(A) = \sum_{i=0}^n -1^{i+k}a_{ik}C_{ik}

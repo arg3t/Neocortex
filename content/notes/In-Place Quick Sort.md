@@ -5,7 +5,7 @@ description:
 tags: ['cs/sorting', 'cs/algorithms', 'cs/java']
 aliases: ['']
 ---
-Implementing [[/notes/Quick Sort|Quick Sort]] in place allows us to decrease the space-complexity of the algorithm and make it slightly more efficient. Here is an in-place implementation of quick sort in java:
+Implementing [[notes/Quick Sort|Quick Sort]] in place allows us to decrease the space-complexity of the algorithm and make it slightly more efficient. Here is an in-place implementation of quick sort in java:
 
 ```java
 public static <K> void quickSortInPlace(K[] S, Comparator<K> comp, int a, int b) {

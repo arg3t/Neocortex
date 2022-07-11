@@ -5,7 +5,7 @@ description:
 tags: ['math/calculus', 'math/multivar']
 aliases: ['']
 ---
-[[/notes/Multivariable Functions|Multivariable Functions]]' derivatives change according to which way you move. However, the gradient of a multivariable function is basically the direction/[[/notes/Vectors|vector]] in which the gradient is maximal. It is basically calculated as such:
+[[notes/Multivariable Functions|Multivariable Functions]]' derivatives change according to which way you move. However, the gradient of a multivariable function is basically the direction/[[notes/Vectors|vector]] in which the gradient is maximal. It is basically calculated as such:
 
 $$
 \triangledown f(x,y) = \langle \frac{\partial f}{\partial x}(x,y), \frac{\partial f}{\partial y}(x,y) \rangle

@@ -5,7 +5,7 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-Elementary row operations change an [[/notes/Augmented Matrix|Augmented Matrix]] while keeping it [[/notes/Equivalent Systems|equivalent]]. 
+Elementary row operations change an [[notes/Augmented Matrix|Augmented Matrix]] while keeping it [[notes/Equivalent Systems|equivalent]]. 
 
 ## Interchange rows
 Interchange the rows bby.

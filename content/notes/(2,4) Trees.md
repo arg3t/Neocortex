@@ -5,7 +5,7 @@ description:
 tags: ['cs/data-structures', 'cs/trees']
 aliases: ['']
 ---
-(2,4) trees are basically [[/notes/Multiway Search Trees|Multiway Search Trees]] with two added rules:
+(2,4) trees are basically [[notes/Multiway Search Trees|Multiway Search Trees]] with two added rules:
 
 - Every internal node can have at most 4 children
 - Every external node has the same depth

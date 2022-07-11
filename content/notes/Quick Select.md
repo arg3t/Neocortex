@@ -5,7 +5,7 @@ description:
 tags: ['cs/algorithms']
 aliases: ['']
 ---
-Quick Select is an algorithm similar to [[/notes/Quick Sort|Quick Sort]], except it does not sort a given but finds the nth smallest element in an array in $O(n)$ time. However, this algorithm has a [[/notes/Big-Theta Notation|worst case time complexity]] of $O(n^2)$ since the recursion tree can be imbalanced. Here is the pseudocode for a function that finds the kth smallest element in an array A:
+Quick Select is an algorithm similar to [[notes/Quick Sort|Quick Sort]], except it does not sort a given but finds the nth smallest element in an array in $O(n)$ time. However, this algorithm has a [[notes/Big-Theta Notation|worst case time complexity]] of $O(n^2)$ since the recursion tree can be imbalanced. Here is the pseudocode for a function that finds the kth smallest element in an array A:
 
 ```
 QuickSelect(n, k):

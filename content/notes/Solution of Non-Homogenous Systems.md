@@ -5,7 +5,7 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-A [[/notes/Consistent and Inconsistent Systems|consistent]] non-homogenous system $Ax=b$'s solution is $x=x_p + x_h$. In which 
+A [[notes/Consistent and Inconsistent Systems|consistent]] non-homogenous system $Ax=b$'s solution is $x=x_p + x_h$. In which 
 
 * $x_p$ is a special solution for the homogenous system $Ax=b$
 * $x_h$ is the solution for homogenous system $Ax=0$

@@ -5,4 +5,4 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-The dimension of a [[/notes/Subspace|Subspace]] $dim W$ is the number of vectors in the [[/notes/Basis Vectors|basis]].
+The dimension of a [[notes/Subspace|Subspace]] $dim W$ is the number of vectors in the [[notes/Basis Vectors|basis]].

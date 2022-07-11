@@ -7,4 +7,4 @@ date: 2021-11-16T21:07:41+01:00
 >  
 >  (Data Structures and Algorithms, Michael Goodrich (Page 172))
 
-So, this means that any operation involving string concatanation run in O(n) time (see [[/notes/Big-Oh Notation|Big-Oh Notation]]), n being the length of the string.
+So, this means that any operation involving string concatanation run in O(n) time (see [[notes/Big-Oh Notation|Big-Oh Notation]]), n being the length of the string.

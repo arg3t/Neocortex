@@ -5,4 +5,4 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-The minor [[/notes/Matrixes|matrix]] $A_{ij}$ of a matrix $A$, is the matrix denoted by deleting the $i^{th}$ row and $j^{th}$ column from the matrix $A$.
+The minor [[notes/Matrixes|matrix]] $A_{ij}$ of a matrix $A$, is the matrix denoted by deleting the $i^{th}$ row and $j^{th}$ column from the matrix $A$.

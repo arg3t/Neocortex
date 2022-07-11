@@ -5,4 +5,4 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-Vectors are basically [[/notes/Matrixes|Matrixes]] with one column or one row. They are used to represent a point, in space, or more oftenly a line with a direction with magnitude.
+Vectors are basically [[notes/Matrixes|Matrixes]] with one column or one row. They are used to represent a point, in space, or more oftenly a line with a direction with magnitude.

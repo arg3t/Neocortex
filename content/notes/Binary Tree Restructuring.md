@@ -5,7 +5,7 @@ description:
 tags: ['cs/data-structures', 'cs/algorithms', 'cs/trees']
 aliases: ['']
 ---
-Sometimes, when creating a [[/notes/Balanced Binary Search Trees|balanced tree]], [[/notes/Binary Tree Rotations|rotations]] may not be sufficient. In this case, a technique called trinode structuring comes in, which is essentially one or two rotations combined. The operation of restructuring from a node $x$ involves these steps:
+Sometimes, when creating a [[notes/Balanced Binary Search Trees|balanced tree]], [[notes/Binary Tree Rotations|rotations]] may not be sufficient. In this case, a technique called trinode structuring comes in, which is essentially one or two rotations combined. The operation of restructuring from a node $x$ involves these steps:
 
 ```
 restructure(x):

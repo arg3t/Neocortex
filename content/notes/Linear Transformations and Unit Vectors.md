@@ -6,4 +6,4 @@ tags: ['math/linear']
 aliases: ['']
 ---
 
-When doing [[/notes/Linear Transformations|Linear Transformations]], the columns of the matrix $A$ actually represent the unit vectors of the new coordinate systems.
+When doing [[notes/Linear Transformations|Linear Transformations]], the columns of the matrix $A$ actually represent the unit vectors of the new coordinate systems.

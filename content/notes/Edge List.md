@@ -6,7 +6,7 @@ tags: ['cs/data-structures']
 aliases: ['']
 ---
 
-The edge list structure basically holds a list of all the edges in a [[/notes/Graphs|graph]] as well as a list of all the vertices. It is a simple yet effective way to store a graph. Since we store vertices and edges, it takes $O(n+m)$ space.^[1]:
+The edge list structure basically holds a list of all the edges in a [[notes/Graphs|graph]] as well as a list of all the vertices. It is a simple yet effective way to store a graph. Since we store vertices and edges, it takes $O(n+m)$ space.^[1]:
 
 | **Method** | **Running Time** |
 |---------------|-------------------|

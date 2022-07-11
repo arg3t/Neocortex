@@ -10,4 +10,4 @@ Empirical analysis is the process of running an algorithm with different input s
 - Does not cover all inputs, thus the inputs not tested are not covered by the empirical analysis.
 - An algorithm must be fully implemented in order to test it, but we only want to implement the fastest algorithm.
 
-Instead of doing empirical analysis, it is a good idea to first calculate the [[/notes/Big-Oh Notation|Big-Oh Complexity]]
+Instead of doing empirical analysis, it is a good idea to first calculate the [[notes/Big-Oh Notation|Big-Oh Complexity]]

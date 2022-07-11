@@ -12,7 +12,7 @@ relative to its input size. The two ways to calculate big-oh notation is:
 ## The easy way
 
 Basically, if you have a function that consists of different versions of the
-[[/notes/7 Important Functions|7 Important Functions]] the one with the highest order/the one that changes
+[[notes/7 Important Functions|7 Important Functions]] the one with the highest order/the one that changes
 with the highest values have the highest precedence. So, for example, the
 function $f(n) = 2n + n^2 + 3nlog_2(n) + 2^n + 6$ has the Big-Oh $O(2^n)$ since
 exponential functions have the highest order. 

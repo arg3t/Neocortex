@@ -5,7 +5,7 @@ description:
 tags: ['cs/algorithms']
 aliases: ['']
 ---
-Depth first search is a traversal algorithm for [[/notes/Graphs|Graphs]]. In DFS, edges are explored until we hit a dead-end where we can go to an unvisited vertice and we backtrack until the last decision point after that. Here is pseudocode for DSF:
+Depth first search is a traversal algorithm for [[notes/Graphs|Graphs]]. In DFS, edges are explored until we hit a dead-end where we can go to an unvisited vertice and we backtrack until the last decision point after that. Here is pseudocode for DSF:
 
 ```
 DFS(G, v):

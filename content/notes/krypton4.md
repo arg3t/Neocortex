@@ -5,7 +5,7 @@ tags: ['cs/security', 'cs/cryptography']
 ---
 
 
-This time a [[/notes/Vigenere|vigenere cipher]] is used to encrypt the text. We know the key is 6 characters long. There are two files. We can just use a simple vigenere [solver](https:f00l.de/hacking/vigenere.php>). Or we can use the script I wrote:
+This time a [[notes/Vigenere|vigenere cipher]] is used to encrypt the text. We know the key is 6 characters long. There are two files. We can just use a simple vigenere [solver](https:f00l.de/hacking/vigenere.php>). Or we can use the script I wrote:
 
 ```python
 def letter_freq(string):

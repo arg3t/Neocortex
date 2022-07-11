@@ -5,13 +5,13 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-Two [[/notes/Matrixes|matrices]] $A$ and $B$ are said to be similar if there exists an invertable matrix $P$ such that:
+Two [[notes/Matrixes|matrices]] $A$ and $B$ are said to be similar if there exists an invertable matrix $P$ such that:
 
 $$
 A = PBP^{-1}
 $$
 
-When you have such similar matrices and you know that $v$ is an [[/notes/Eigenvectors|eigenvector]] of $B$, $Pv$ must be an eigenvector of $A$ with the same [[/notes/Eigenvalues|eigenvalue]].
+When you have such similar matrices and you know that $v$ is an [[notes/Eigenvectors|eigenvector]] of $B$, $Pv$ must be an eigenvector of $A$ with the same [[notes/Eigenvalues|eigenvalue]].
 
 $$
 A(Pv) = PBP^{-1}Pv = PBv = P\lambda v = \lambda Pv

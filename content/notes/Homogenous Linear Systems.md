@@ -7,4 +7,4 @@ aliases: ['']
 ---
 A system $Ax = b$ is homogenous if $b=0$, non-homogenous otherwise.
 
-> A homogenous system is always [[/notes/Consistent and Inconsistent Systems|consistent]]
+> A homogenous system is always [[notes/Consistent and Inconsistent Systems|consistent]]

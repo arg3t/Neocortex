@@ -17,7 +17,7 @@ x > 0, & \frac{f(x-1)}{2}
 \end{cases}
 $$
 
-This function constantly makes a recursive call to itself until the value x becomes less than 0, then it hits the **base case** and returns 2. Creating a [[/notes/Closed Form Equation|Closed Form Equation]] from recurrence equations is a trivial task, Basically, you need to write out the function for several steps. For instance:
+This function constantly makes a recursive call to itself until the value x becomes less than 0, then it hits the **base case** and returns 2. Creating a [[notes/Closed Form Equation|Closed Form Equation]] from recurrence equations is a trivial task, Basically, you need to write out the function for several steps. For instance:
 - [ ] Closed form equation link
 
 $$

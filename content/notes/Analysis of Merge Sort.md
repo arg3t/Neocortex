@@ -5,14 +5,14 @@ description:
 tags: ['cs/analysis', 'cs/algorithms', 'cs/sorting']
 aliases: ['']
 ---
-Calculating the [[/notes/Big-Oh Notation|Big-Oh Complexity]] of [[/notes/Merge Sort|Merge Sort]] is not a difficult task. There are two ways to do it, one being more intuitive and the other being more mathematical.
+Calculating the [[notes/Big-Oh Notation|Big-Oh Complexity]] of [[notes/Merge Sort|Merge Sort]] is not a difficult task. There are two ways to do it, one being more intuitive and the other being more mathematical.
 
 ## Using the reccurence tree
 When you draw a diagram how the merge sort algorithm calls itself recursively, you get a very intuitive yet solid proof that the algorithm's time complexity is $O(nlog(n))$:
 
 ![[images/7DEDD8CB-8CFC-4D10-A373-709BBFAC2459.jpeg]]
 
-## Using its [[/notes/Recurrence Equations|recurrence equation]]
+## Using its [[notes/Recurrence Equations|recurrence equation]]
 Even though this approach is less intuitive I feel like this is just more solid and has its feet on the ground. Basically, when you write the recurrence equation of $t(n)$ which is the worst case running time of merge sort you get the following:
 $$
 t(n)=\begin{cases}

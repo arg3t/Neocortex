@@ -5,7 +5,7 @@ description:
 tags: ['math/linear', 'math/analysis']
 aliases: ['']
 ---
-A scalar $\lambda$ is a [[/notes/Matrixes|matrix]] $A$'s [[/notes/Eigenvalues|eigenvalue]] iff the [[/notes/Determinant|Determinant]] of $A - \lambda I$ is $0$.
+A scalar $\lambda$ is a [[notes/Matrixes|matrix]] $A$'s [[notes/Eigenvalues|eigenvalue]] iff the [[notes/Determinant|Determinant]] of $A - \lambda I$ is $0$.
 
 > The equation $det(A - \lambda I) = 0$ is called the characteristic equation
 

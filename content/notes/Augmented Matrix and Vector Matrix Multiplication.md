@@ -5,7 +5,7 @@ description:
 tags: ['math/linear']
 aliases: ['']
 ---
-- An [[/notes/Augmented Matrix|Augmented Matrix]] can also be written using [[/notes/Matrix-Vector Product|Matrix-Vector Product]] like below:
+- An [[notes/Augmented Matrix|Augmented Matrix]] can also be written using [[notes/Matrix-Vector Product|Matrix-Vector Product]] like below:
 
 $$
 \left[\begin{array}{ccc|c}  

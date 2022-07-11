@@ -13,7 +13,7 @@ v_1 & v_2 & v_3 & ... & v_n
 \end{bmatrix} x = 0
 $$
 
-only has the [[/notes/Trivial Solution|Trivial Solution]] as a solution. 
+only has the [[notes/Trivial Solution|Trivial Solution]] as a solution. 
 
 It can also be said that the set is linearly dependent if a vector in the set is a linear combination of one or more vectors in the set.
 

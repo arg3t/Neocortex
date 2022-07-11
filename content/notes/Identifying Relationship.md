@@ -5,4 +5,4 @@ description:
 tags: ['cs/databases']
 aliases: ['']
 ---
-Identifying relationships are relationships that not only act as a connection between two [[/notes/Entity|Entity]]s, but also act as an identifier to an entity.
+Identifying relationships are relationships that not only act as a connection between two [[notes/Entity|Entity]]s, but also act as an identifier to an entity.

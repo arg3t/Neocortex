@@ -15,6 +15,6 @@ A transformation with domain $n$ and codomain $m$, which is made using an $n \ti
 - $T(cv) = cT(v)$ 
 - $T(0) = 0$
 
-> If a [[/notes/Matrix Transformation|Matrix Transformation]] does not have these properties, it is not a linear transformation. 
+> If a [[notes/Matrix Transformation|Matrix Transformation]] does not have these properties, it is not a linear transformation. 
 
 <iframe height="500px" width="100%" src="https://prime-applets.ewi.tudelft.nl/apps/linear-algebra/transformations/"></iframe>

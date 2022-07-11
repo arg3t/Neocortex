@@ -5,7 +5,7 @@ description:
 tags: ['math/analysis', 'math/calculus']
 aliases: ['']
 ---
-Taylor series are [[/notes/Power Series|Power Series]] which can describe a function $f$, which is continously differentiable. The taylor series of a function $f$ at the point $a$ is defined as:
+Taylor series are [[notes/Power Series|Power Series]] which can describe a function $f$, which is continously differentiable. The taylor series of a function $f$ at the point $a$ is defined as:
 
 $$
 \sum \frac{f^{(n)}(x-a)^n}{n!}

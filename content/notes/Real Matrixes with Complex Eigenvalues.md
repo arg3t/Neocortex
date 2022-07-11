@@ -6,7 +6,7 @@ tags: ['math/linear']
 aliases: ['']
 ---
 
-Given a $2 \times 2$ [[/notes/Matrixes|matrix]] in the form:
+Given a $2 \times 2$ [[notes/Matrixes|matrix]] in the form:
 
 $$
 A = \begin{bmatrix}
@@ -15,10 +15,10 @@ b & a
 \end{bmatrix}
 $$
 
-> This is a [[/notes/Rotational Transformations|rotational transformation]]
+> This is a [[notes/Rotational Transformations|rotational transformation]]
 
 
-Then $A$ has the eigenvalues $\lambda_{\pm}= a \pm bi$ and can be represented by the [[/notes/Euler's Identity|Euler's Identity]] of
+Then $A$ has the eigenvalues $\lambda_{\pm}= a \pm bi$ and can be represented by the [[notes/Euler's Identity|Euler's Identity]] of
 
 $$
 a + bi = re^{i\phi}

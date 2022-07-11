@@ -5,7 +5,7 @@ description:
 tags: ['cs/data-structures']
 aliases: ['']
 ---
-* **Simple [[/notes/Graphs|Graph]]:** A graph with no [[/notes/Vertice Terminology#^2fdf69|self loops]]
+* **Simple [[notes/Graphs|Graph]]:** A graph with no [[notes/Vertice Terminology#^2fdf69|self loops]]
 * **Simple path:** A path in which no vertex is visited more than once.
 * **Connected Graph:** In a graph, any two vertices have a path between them. If the graph is directional, it is called **strongly connected**. ^42fbff
 * **Spanning Subgraph:** A subgraph that contains all the vertices of the main graph.

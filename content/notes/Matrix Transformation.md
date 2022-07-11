@@ -23,5 +23,5 @@ $$
 \end{bmatrix}
 $$
 
-The domain is its length, while the codomain is its height. (Due to the properties of [[/notes/Matrix-Vector Product|Matrix-Vector Product]]). While its range is the [[/notes/Vector Span|Vector Span]] of its column.
+The domain is its length, while the codomain is its height. (Due to the properties of [[notes/Matrix-Vector Product|Matrix-Vector Product]]). While its range is the [[notes/Vector Span|Vector Span]] of its column.
 

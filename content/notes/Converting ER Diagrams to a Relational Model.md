@@ -3,7 +3,7 @@ title: Converting ER Diagrams to a [[Relational Model]]
 date: 2021-12-14T20:32:21+01:00
 tags: [ 'cs/diagrams', 'cs/databases']
 ---
-Even though [[/notes/ER Diagrams|ER Diagrams]] contain more semantic information, they are harder to turn into actual databases because some of the constraints are impossible to represent.
+Even though [[notes/ER Diagrams|ER Diagrams]] contain more semantic information, they are harder to turn into actual databases because some of the constraints are impossible to represent.
 
 ## Simple Entities
 When you have an entitity without any relations connected to it, all you need to do is to create an entry in the schema with the given attributes.
@@ -22,7 +22,7 @@ Same as the 1:M one, just need to pick a side to put the relation.
 ## Attributes Attached to Relation
 When attributes are attached to a relation, you simply add another attribute to the relation.
 
-## [[/notes/ER Diagrams Weak Entity and Identifying Relationship|Weak Entity and Identifying Relationship in ER Diagrams]]
+## [[notes/ER Diagrams Weak Entity and Identifying Relationship|Weak Entity and Identifying Relationship in ER Diagrams]]
 Since weak entities are defined using the identifying relationship, you put the relationship in the weak entity.
 
 ## Composite Attributes
