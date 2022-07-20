@@ -14,6 +14,7 @@ You can find the details on how I take my notes and how I publish them [[notes/T
 If you want, I also keep [an index of all the notes I have taken](/notes).
 
 My most recent notes centered around **CS**:
+
 ```js-block
 function genIndex(arr, key, comparator){
 	return Array.from(Array(arr.length).keys())
