@@ -8,6 +8,6 @@ aliases: ['']
 
 When networks get very big, you can start inserting [[notes/IP Ranges|ip ranges]] into routing tables. When routing a fragment, if the destination ip is in one of the IP ranges in the table, the packet gets routed to that router.
 
-```ad-caution
-When two or more ip ranges contain the destination ip, the router with the smallest range is selected.
-```
+> [!Warning] Caution
+>
+> When two or more ip ranges contain the destination ip, the router with the smallest range is selected.

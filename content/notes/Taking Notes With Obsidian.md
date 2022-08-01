@@ -66,11 +66,11 @@ plot sin(x)/x
 You can also insert admonitions like so
 
 ````md
-```ad-info
-This is an admonition
-```
+> [!info] Example
+>
+> This is an admonition
 ````
 
-```ad-info
-This is an admonition
-```
+> [!info] Example
+>
+> This is an admonition

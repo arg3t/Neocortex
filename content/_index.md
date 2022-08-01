@@ -5,11 +5,15 @@ date: 2021-11-16T21:07:41+01:00
 
 ![hello there](images/hello_there.gif)
 
-This is where I keep my notes related to anything I learn. Since I am currently a computer science student, most of the notes are centered around computer science and maths.  
+This is where I keep my notes related to anything I learn. Since I am currently
+a computer science student, most of the notes are centered around computer
+science and maths
 
-Once I get the time,  I will probably use this to take notes on my other thoughts as well as books I read. 
+Once I get the time,  I will probably use this to take notes on my other
+thoughts as well as books I read. 
 
-You can find the details on how I take my notes and how I publish them [[notes/Taking Notes With Obsidian|here]].
+You can find the details on how I take my notes and how I publish them
+[[notes/Taking Notes With Obsidian|here]].
 
 If you want, I also keep [an index of all the notes I have taken](/notes).
 

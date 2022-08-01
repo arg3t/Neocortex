@@ -22,9 +22,9 @@ graph LR;
 |B|1|B|
 |C|1|C|
 
-```ad-warning
-When the path to a router is the same through two different edges, the *through* column is selected according to the protocol policy.
-```
+> [!Warning] Caution
+>
+> When the path to a router is the same through two different edges, the *through* column is selected according to the protocol policy.
 
 ## Count to infinity problem
 

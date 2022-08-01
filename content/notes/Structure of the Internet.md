@@ -13,6 +13,7 @@ When a packet needs to be moved from one router to another, a process called [[n
 The internet is split up into several subnetworks([[notes/Graph Terminology#^f18c89|connected components]]). Each connected component is owned by an [[notes/ISP|ISP]]. The communication between those ISPs are done using two options:
 * IXPs(Internet Exchange Points) which are huge data centers that manage traffic between ISPs.
 * Routers of different ISPs just communicate with each other if there is a link between them.
-```ad-info
-The policy for each ISP differs according to politics, economics and many other factors
-```
+
+> [!info] Info
+>
+> The policy for each ISP differs according to politics, economics and many other factors

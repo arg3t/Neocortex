@@ -5,12 +5,15 @@ enableLinkPreview: true
 enableLatex: true
 enableCodeBlockTitle: false
 enableCodeBlockCopy: true
+enableCallouts: true
 enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: false
-enableGitHubEdit: false
+enableGitHubEdit: true
 GitHubLink: https://github.com/jackyzha0/quartz/tree/hugo/content
+enableSemanticSearch: false
+operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
 description:
   This is my public wiki where I keep my notes related to computer science, security, and maths.
 page_title:
