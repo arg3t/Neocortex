@@ -6,7 +6,7 @@ aliases: ['AOP']
 ---
 
 Aspect Oriented Programming complements OOP by shifting the focus from objects
-to [[notes/5aq8|aspects]]. This enables programmers to manage transactions, access control and
+to [[notes/Aspects|aspects]]. This enables programmers to manage transactions, access control and
 many features in a more modular manner.
 
 

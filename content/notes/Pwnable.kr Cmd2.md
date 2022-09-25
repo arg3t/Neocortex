@@ -5,7 +5,7 @@ tags: ['cs/security']
 aliases: ['']
 ---
 
-Similar to [[notes/uolp | cmd1]], this one is another jail escape. I am not
+Similar to [[notes/Pwnable.kr Cmd1 | cmd1]], this one is another jail escape. I am not
 going to go too much into details, but we can run the following:
 
 ```sh

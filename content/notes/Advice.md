@@ -5,7 +5,7 @@ tags: ['cs/java']
 aliases: ['']
 ---
 
-An advice is when the action is taken by the [[notes/5aq8|aspect]].
+An advice is when the action is taken by the [[notes/Aspects|aspect]].
 It can be either *around*, *before* or *after*.
 
 

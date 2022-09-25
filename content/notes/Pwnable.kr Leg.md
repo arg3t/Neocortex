@@ -142,7 +142,7 @@ Key1 basically does:
 mov r3, pc
 ```
 
-In ARM there are two [[notes/r2vs | modes]]. After trial and error, we find out the 
+In ARM there are two [[notes/ARM Modes | modes]]. After trial and error, we find out the 
 instance is running in thumb mode. So pc is next_next_instruction = 0x8ce4
 
 ## key2()

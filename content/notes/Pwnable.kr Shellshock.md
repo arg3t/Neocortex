@@ -12,7 +12,7 @@ executable runs like below:
 system("/home/shellshock/bash -c 'echo shock_me'");
 ```
 
-The bash binary is vulnerable to [[notes/k5eu | shellshock]] as can be seen by the following
+The bash binary is vulnerable to [[notes/Shellshock | shellshock]] as can be seen by the following
 command:
 
 

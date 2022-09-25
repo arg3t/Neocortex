@@ -6,8 +6,8 @@ aliases: ['']
 ---
 
 A point of execution on the program that sits between the method we want to
-execute and the [[notes/5aq8|aspect]] that needs to be executed. It sits between
-an aspect and an [[notes/7dlm|advice]].
+execute and the [[notes/Aspects|aspect]] that needs to be executed. It sits between
+an aspect and an [[notes/Advice|advice]].
 
 
 
