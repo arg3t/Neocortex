@@ -9,7 +9,7 @@ Classification is the problem of guessing to which class it belongs(often
 represented by the symbol $\omega$) given a data point. For this problem, it is
 quite common to calculate the [[notes/Posterior Probability|posterior probability]] of a data
 point for each class and classifying that point as the group with the largest
-prob.  
+probability.
 
 Given this definition, a classifier can be defined in the following ways:
 
