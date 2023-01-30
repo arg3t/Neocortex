@@ -8,6 +8,7 @@ aliases: ['Exchange Argument']
 
 The exchange argument is a proof method used to prove the optimality of [[notes/Greedy Algorithm|Greedy Algorithms]]. The proof is based on the idea that given an optimal solution with inversions, commpared to the the greedy solution, fixing those inversions brings the optimal solution closer to the greedy solution whilst preserving optimality.
 
+
 > [!WARNING]
 > For two elements in the wrong order compared to the greedy solution to be considered an inversion, they need to be next  to each other.
 

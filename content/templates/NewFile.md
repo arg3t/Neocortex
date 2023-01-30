@@ -9,6 +9,6 @@
 title:  <%* tR += `${title}` %>
 date: <% tp.date.now("YYYY-MM-DDThh:mm:ssZ") %>
 description: 
-tags: ['']
+tags: []
 aliases: ['<%* tR += `${title}` %>']
 ---
