@@ -6,7 +6,7 @@ aliases: ['']
 ---
 
 
-Posterior probability is the probability that a given data points belongs to a
+Posterior probability is the probability that a given data point belongs to a
 class. It is often represented by $p(\omega_1|x)$ where $\omega_1$ is a group
 and $x$ is a data point.
 

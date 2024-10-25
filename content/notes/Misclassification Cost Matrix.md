@@ -6,7 +6,7 @@ tags: ['cs/ml']
 aliases: ['Misclassification Cost Matrix']
 ---
 
-The [[notes/Misclassification Cost|Misclassification Cost]] for each class can be placed into a matrix of size $C \times C$ where $C$ is the number of classes. In this matrix, a point $(a,b)$ has the value of $\lambda_{a,b}$. This means that the diagonal values in the matrix are always $0$.
+The [[notes/Misclassification Cost|Misclassification Cost]] for each class can be placed into a matrix of size $C \times C$ where $C$ is the number of classes. In this matrix, a point $(a,b)$ has the value of $\lambda_{a,b}$.
 
 $$
 \begin{bmatrix}

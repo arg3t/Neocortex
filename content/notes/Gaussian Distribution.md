@@ -12,7 +12,16 @@ $$
 p(x | \mu, \sigma) = \frac{1}{\sqrt{2\pi \sigma^2}}exp(-\frac{(x-\mu)^2}{2\sigma^2})
 $$
 
-```plot
- normal(x, mu, sd) = (1/(sd*sqrt(2*pi)))*exp(-(x-mu)**2/(2*sd**2))
- plot [-3:3] normal(x,0,1)
+
+
+```functionplot
+---
+title: Standard Normal Dist
+xLabel: 
+yLabel: 
+bounds: [-3,3,0,0.5]
+disableZoom: false
+grid: true
+---
+f(x) = (1/(1*sqrt(2*PI)))*pow(E, -(x-0)^2/(2*1^2))
 ```
